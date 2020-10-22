@@ -55,20 +55,20 @@ function renderMap(data, svg_id, val_range, rate_type) {
     
         //create array for selected states
     let selectedStates=[];
-    function selected() {
+    function selected(d) {
         if(!selectedStates.includes(this)){
             d3.select(this).classed('selected', true).raise();
-            selectedStates.push(this);
+            selectedStates.push(d.properties.name);
         }
 
         //to clear all: d3.select('.selected').classed('selected', false);
         //unselect states when clicked on again
         else {
             d3.select(this).classed('selected', false);
-            var index=selectedStates.indexOf(this);
+            var index=selectedStates.indexOf(d.properties.name);
             selectedStates.splice(index, 1);
         }
-        updateGraphs(selectedStates, stats);
+        updateGraphs(selectedStates);
     }
 
     //STATE DETAILS

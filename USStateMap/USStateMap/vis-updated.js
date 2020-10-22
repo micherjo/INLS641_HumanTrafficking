@@ -72,7 +72,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
     }
 
     //STATE DETAILS
-    function updateGraphs(selectedStates, stats) {
+    function updateGraphs(selectedStates) {
         var width = 350;
         var height = 200;
         var margin_x = 20;

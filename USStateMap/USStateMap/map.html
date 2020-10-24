@@ -7,9 +7,12 @@
     <script src="https://unpkg.com/topojson@3"></script>
     <script src="vis-updated.js"></script>
     <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="line-chart.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <div id="mapdiv">
     <div class="heading">
         <h1>FBI Human Trafficking Cases in the United States</h1>
@@ -24,12 +27,40 @@
           </defs>
     </svg>
 </div>
+
 <div id="state-comparison">
     <div class="heading">
         <h2>State comparison</h2>
     </div>
-    <div id="state-graphs">     
+    <form name="radios" id="lineChart-radioInputs">
+        <input type="radio" name="btn" id="Age Group" value="Age Group" checked>
+        <label for="Age Group" style="padding-right: 15px;">Age Group</label>
+
+        <input type="radio" name="btn" id="Gender" value="Gender">
+        <label for="Gender" style="padding-right: 15px;">Gender</label>
+
+        <input type="radio" name="btn" id="Race" value="Race">
+        <label for="Race" style="padding-right: 15px;">Race</label>
+
+        <input type="radio" name="btn" id="Ethnicity" value="Ethnicity">
+        <label for="Ethnicity" style="padding-right: 15px;">Ethnicity</label>
+
+        </form>
+
+    <div id="state-graphs">
+
     </div>
 </div>
+
+
 </body>
 </html>
+
+<!-- Line chart loading -->
+<script type="module" src="line-chart.js"></script>
+
+<!-- Loading D3 v5 here -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-array.v2.js"></script>
+
+

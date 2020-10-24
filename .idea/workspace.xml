@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/.idea/d3-obesity-usa.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/USStateMap/obesity_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts" beforeDir="false" afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/d3times.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/images/Age_group.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/images/Income.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/images/Race.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/images/education.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/images/gender.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/modules/cartogram-chart/cartogram.js" beforeDir="false" afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/modules/cartogram-chart/cartogram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/modules/line-chart/dummyLineChart.html" beforeDir="false" afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/modules/line-chart/dummyLineChart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/modules/line-chart/line-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/modules/line-chart/line-chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/modules/line-chart/obesity_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/modules/line-chart/obesity_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/cartogram.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/convert_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/dorling-cartogram-circle-packs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/dorling-cartogram-circle-packs/c421a57a3d22c60e@409.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/dorling-cartogram-circle-packs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/dorling-cartogram-circle-packs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/dorling-cartogram-circle-packs/inspector.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/dorling-cartogram-circle-packs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/dorling-cartogram-circle-packs/runtime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/obesity_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/observable_data_states.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/resources/topojson-client.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/resources/us-atlas@2.1.0-us-10m.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/scatterplot_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/tutorial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/d3-cartogram/us_stats.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/d3-playground/vanyas-tutorials/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/layout-sample.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HumanTrafficking_LineCharts/obesity_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/HumanTrafficking_LineCharts/obesity_data.csv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jKXDvki3tluKxniVJRfa6ApzxW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/USStateMap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Miche\WebstormProjects\INLS641_HumanTrafficking\USStateMap" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="" />
+      <created>1603553640985</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603553640985</updated>
+      <workItem from="1603553642094" duration="102000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

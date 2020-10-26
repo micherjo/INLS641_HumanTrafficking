@@ -78,13 +78,6 @@ function renderMap(data, svg_id, val_range, rate_type) {
     var height = 200;
     var margin_x = 20;
     var margin_y = 20;
-    var x = d3.scaleLinear()
-        .domain([2014, 2019])
-        .range([margin_x,width-margin_x]);
-
-    var y = d3.scaleLinear()
-        .domain([150, 0])
-        .range([margin_y,height-margin_y]);
 
     function updateGraphs(selectedStates) {
 
@@ -123,81 +116,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .attr("text-anchor", "middle")
             .text(function(d) { return(d); });
 
-        // g.append(createGenderGraph);
     }
 
-    // I made this function to try to insert a graph for gender that I made separately
-    // I'm trying to figure out how to get it to show up in the rectangle (-Laura)
 
-    // function createGenderGraph() {
-    //
-    //     var femaleline = d3.line()
-    //         .x(function(d) { return x(d.year); })
-    //         .y(function(d) { return y(d.female); });
-    //
-    //     var maleline = d3.line()
-    //         .x(function(d) { return x(d.year); })
-    //         .y(function(d) { return y(d.male); });
-    //
-    //     svg.append("g")
-    //         .attr("class", "axis")
-    //         .attr("transform", "translate(0,"+(500-margin_x)+")")
-    //         .call(d3.axisBottom(x));
-    //
-    //     svg.append("text")
-    //         .attr("class", "axis-label")
-    //         .attr("y", 495)
-    //         .attr("x",500 / 2)
-    //         .style("text-anchor", "middle")
-    //         .text("Year");
-    //
-    //     svg.append("g")
-    //         .attr("class", "axis")
-    //         .attr("transform", "translate("+margin_y+",0)")
-    //         .call(d3.axisLeft(y));
-    //
-    //     svg.append("text")
-    //         .attr("transform", "rotate(90)")
-    //         .attr("class", "axis-label")
-    //         .attr("y", -5)
-    //         .attr("x",500 / 2)
-    //         .style("text-anchor", "middle")
-    //         .text("Number of Offenses Per 10 Million People");
-    //
-    //     svg.append("clipPath")
-    //         .attr("id", "clip")
-    //         .append("rect")
-    //         .attr("x", margin_x)
-    //         .attr("y", margin_y)
-    //         .attr("width", width-2*margin_x)
-    //         .attr("height", height-2*margin_y);
-    //
-    //     var stackedData = d3.stack();
-    //
-    //     svg.append("path")
-    //         .attr("d", femaleline(data))
-    //         .attr("fill", "pink")
-    //         .style("opacity", 1.0);
-    //
-    //     svg.append("path")
-    //         .attr("d", maleline(data))
-    //         .attr("fill", "blue")
-    //         .style("opacity", .35);
-    //
-    //     svg.selectAll("dot")
-    //         .data(data)
-    //         .enter().append("circle")
-    //         .attr("r", 3.5)
-    //         .attr("cx", function(d) { return x(d.year); })
-    //         .attr("cy", function(d) { return y(d.female); })
-    //         .attr("fill", "pink");
-    //
-    //     svg.selectAll("dot")
-    //         .data(data)
-    //         .enter().append("circle")
-    //         .attr("r", 3.5)
-    //         .attr("cx", function(d) { return x(d.year); })
-    //         .attr("cy", function(d) { return y(d.male); })
-    //         .attr("fill", "blue");
-    // }
 }

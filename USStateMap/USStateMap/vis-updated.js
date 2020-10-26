@@ -73,7 +73,6 @@ function renderMap(data, svg_id, val_range, rate_type) {
     }
 
     //STATE DETAILS
-    let ht_data = d3.csv("human_trafficking.csv");
     var width = 350;
     var height = 200;
     var margin_x = 20;

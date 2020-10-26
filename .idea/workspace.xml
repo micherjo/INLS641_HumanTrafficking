@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="I added the names into the rectangles" />
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="I added the names into the rectangles">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebstormProjects/HumanTrafficking_LineCharts2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -71,6 +73,9 @@
       <workItem from="1603660303334" duration="13251000" />
       <workItem from="1603731649487" duration="2042000" />
       <workItem from="1603739391309" duration="510000" />
+      <workItem from="1603740392778" duration="16000" />
+      <workItem from="1603740410284" duration="40000" />
+      <workItem from="1603740740201" duration="1212000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -114,11 +119,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="338" y="142" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/-1487.-1080.1920.1040@0.0.1280.680" timestamp="1603660360524" />
-    <state x="632" y="162" key="FileChooserDialogImpl" timestamp="1603739694050">
+    <state x="632" y="162" key="FileChooserDialogImpl" timestamp="1603740407441">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603676837727" />
-    <state x="632" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603739694050" />
+    <state x="632" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603740407441" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1603734010068">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

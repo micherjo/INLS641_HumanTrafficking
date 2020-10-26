@@ -11,7 +11,7 @@ Promise.all([
 // The callback which renders the page after the data has been loaded.
 function ready(data) {
     // Render the map.
-    renderMap(data, "#mapsvg_pr", [0, 0.01, 0.02, 0.37], "Larger_Percentage");
+    renderMap(data, "#mapsvg_pr", [0, 0.01, 0.02, 0.37], "Cases_per10M");
 }
 
 // Helper function which, given the entire stats data structure, extracts the requested rate for the requested state
@@ -43,7 +43,8 @@ function renderMap(data, svg_id, val_range, rate_type) {
     //https://www.w3schools.com/colors/colors_picker.asp
     //let colormap = d3.scaleLinear().domain(val_range).range(["lightblue", "linen", "maroon"]);
     //let colormapSelected = d3.scaleLinear().domain(val_range).range(["#ffe6e6", "#ff8080", "#800000", "#330000"]);
-    let colormap = d3.scaleLinear().domain(val_range).range(["#e6f0ff", "#80b3ff", "#0066ff", "#19194d"]);
+    let colormap = d3.scaleSequentialLog().domain([1, 300]).interpolator(d3.interpolatePuBuGn);
+
 
     svg.append("g")
         .attr("class", "states")

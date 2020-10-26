@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="I added the names into the rectangles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/human_trafficking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/human_trafficking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/statesformap.csv" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/statesformap.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/vis-updated.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Desktop/INLS_641/gender_line_chart.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebstormProjects/untitled" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -73,6 +75,7 @@
       <workItem from="1603553642094" duration="102000" />
       <workItem from="1603660303334" duration="13251000" />
       <workItem from="1603731649487" duration="2042000" />
+      <workItem from="1603739391309" duration="188000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -116,10 +119,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="338" y="142" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680/-1487.-1080.1920.1040@0.0.1280.680" timestamp="1603660360524" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1603676837727">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="632" y="162" key="FileChooserDialogImpl" timestamp="1603739400833">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603676837727" />
+    <state x="632" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603739400833" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1603734010068">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

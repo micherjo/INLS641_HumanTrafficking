@@ -43,8 +43,8 @@ function renderMap(data, svg_id, val_range, rate_type) {
     //https://www.w3schools.com/colors/colors_picker.asp
     //let colormap = d3.scaleLinear().domain(val_range).range(["lightblue", "linen", "maroon"]);
     //let colormapSelected = d3.scaleLinear().domain(val_range).range(["#ffe6e6", "#ff8080", "#800000", "#330000"]);
-    let colormap = d3.scaleSequentialLog().domain([1, 400]).interpolator(d3.interpolatePuBuGn);
-
+    let colormap = d3.scaleSequentialLog().domain([1, 400]).interpolator(d3.interpolateYlGnBu);
+//https://codepen.io/tha-Sup3rN0va/full/jpYKKV
 
     svg.append("g")
         .attr("class", "states")

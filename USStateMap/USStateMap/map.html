@@ -48,6 +48,19 @@
         </form>
 
     <div id="state-graphs">
+        <div id="wrapper" class="wrapper">
+
+            <div id="tooltip" class="tooltip">
+                <div class="tooltip-range">
+                    Humidity: <span id="range"></span>
+                </div>
+                <div class="tooltip-value">
+                    <span id="count"></span> days
+                </div>
+            </div>
+            <script src="line-chart.js"></script>
+        </div>
+
 
     </div>
 </div>
@@ -62,5 +75,6 @@
 <!-- Loading D3 v5 here -->
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://d3js.org/d3-array.v2.js"></script>
+<script src="https://d3js.org/d3.v5.js"></script>
 
 

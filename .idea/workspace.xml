@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="I added the names into the rectangles">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/map.html" afterDir="false" />
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="removed line chart">
       <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/vis-updated.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +79,7 @@
       <workItem from="1603740740201" duration="1524000" />
       <workItem from="1603742789471" duration="301000" />
       <workItem from="1603747590750" duration="1432000" />
-      <workItem from="1603806470532" duration="1773000" />
+      <workItem from="1603806470532" duration="2131000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -97,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603733498524</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removed line chart">
+      <created>1603808394497</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603808394497</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +124,8 @@
     <option name="LIMIT_HISTORY" value="false" />
     <MESSAGE value="I added the names into the rectangles and tried to mess around with adding graphs in -Laura" />
     <MESSAGE value="I added the names into the rectangles" />
-    <option name="LAST_COMMIT_MESSAGE" value="I added the names into the rectangles" />
+    <MESSAGE value="removed line chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed line chart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="338" y="142" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603660360524">
@@ -140,15 +146,16 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2381" y="224" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603747633298" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1603734010068">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1603808405722">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808405722" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603808245728">
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603808305583">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-790" y="-692" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603807768053" />
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808245728" />
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808305583" />
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1487.-1080.1920.1040@0.0.1280.680" timestamp="1603660552586" />
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1603749028335">
       <screen x="0" y="0" width="1920" height="1160" />

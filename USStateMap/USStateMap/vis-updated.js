@@ -112,8 +112,8 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .attr("x", 0.40*width)
             // .attr("y", height)
             .attr("dy", "1em")
-            .attr("text-anchor", "middle");
-            // .text(function(d) { return(d); });
+            .attr("text-anchor", "middle")
+            .text(function(d) { return(d); });
 
     }
 

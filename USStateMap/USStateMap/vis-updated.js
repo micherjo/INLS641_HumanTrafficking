@@ -24,7 +24,6 @@ function getrate(stats, state_name, rate_type) {
     }
 }
 
-
 // Renders a map within the DOM element specified by svg_id.
 function renderMap(data, svg_id, val_range, rate_type) {
     //console.log(data);
@@ -107,7 +106,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .attr("width", width)
             .attr("height", height);
 
-        //currently there is no text
+        // Add state name to each rectangle
         g.append("text")
             .attr("class", "label")
             .attr("x", 0.40*width)

@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="I added the names into the rectangles">
-      <change afterPath="$PROJECT_DIR$/USStateMap/USStateMap/my_weather_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/line-chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/line-chart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/line-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/line-chart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/USStateMap/vis-updated.js" afterDir="false" />
     </list>
@@ -84,6 +81,7 @@
       <workItem from="1603740740201" duration="1524000" />
       <workItem from="1603742789471" duration="301000" />
       <workItem from="1603747590750" duration="1432000" />
+      <workItem from="1603806470532" duration="1773000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -146,9 +144,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603660552586">
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603808245728">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="-790" y="-692" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603807768053" />
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808245728" />
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1487.-1080.1920.1040@0.0.1280.680" timestamp="1603660552586" />
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1603749028335">
       <screen x="0" y="0" width="1920" height="1160" />

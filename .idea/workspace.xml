@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Axes should show up when you click on each state">
-      <change beforePath="$PROJECT_DIR$/.idea/INLS641_HumanTrafficking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/INLS641_HumanTrafficking.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
     </list>
@@ -102,7 +101,7 @@
       <workItem from="1603747590750" duration="1432000" />
       <workItem from="1603806470532" duration="2131000" />
       <workItem from="1603904561887" duration="903000" />
-      <workItem from="1603905631005" duration="3674000" />
+      <workItem from="1603905631005" duration="3855000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -132,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603808981863</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Axes should show up when you click on each state">
+      <created>1603919586216</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603919586216</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,10 +190,11 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2381" y="224" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603747633298" />
-    <state x="2270" y="125" key="Vcs.Push.Dialog.v2" timestamp="1603808989701">
-      <screen x="1920" y="0" width="1920" height="1160" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1603919600173">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808405722" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-144.1920.1040@0.0.1280.680" timestamp="1603919600173" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
     <state x="2270" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603808989701" />
     <state x="2607" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603808822001">

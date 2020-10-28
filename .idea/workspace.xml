@@ -19,20 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Fixed commented out text and color scheme">
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/human_trafficking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/human_trafficking.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/line-chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/line-chart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/line-chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/line-chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/statesformap.csv" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/statesformap.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/us-states.json" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/us-states.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USStateMap/USStateMap/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/USStateMap/vis-updated.js" afterDir="false" />
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Axes should show up when you click on each state">
+      <change beforePath="$PROJECT_DIR$/.idea/INLS641_HumanTrafficking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/INLS641_HumanTrafficking.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/USStateMap/USStateMap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../d3-obesity-usa-master" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -56,16 +58,28 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.map.html">
+    <configuration name="gender_line_chart.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/INLS641_HumanTrafficking/gender_line_chart.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="graph_scratch.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/INLS641_HumanTrafficking/graph_scratch.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="map.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/INLS641_HumanTrafficking/map.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="line-chart.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/line-chart.js" working-dir="$PROJECT_DIR$/USStateMap/USStateMap">
+    <configuration name="gender_line_chart.html" type="NodeJSConfigurationType" temporary="true" path-to-js-file="$PROJECT_DIR$/line-chart.js" working-dir="$PROJECT_DIR$/USStateMap/USStateMap">
+      <method v="2" />
+    </configuration>
+    <configuration name="vis-updated.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/vis-updated.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.map.html" />
-        <item itemvalue="Node.js.line-chart.js" />
+        <item itemvalue="Node.js.vis-updated.js" />
+        <item itemvalue="JavaScript Debug.gender_line_chart.html" />
+        <item itemvalue="Node.js.gender_line_chart.html" />
+        <item itemvalue="JavaScript Debug.graph_scratch.html" />
       </list>
     </recent_temporary>
   </component>
@@ -87,6 +101,8 @@
       <workItem from="1603742789471" duration="301000" />
       <workItem from="1603747590750" duration="1432000" />
       <workItem from="1603806470532" duration="2131000" />
+      <workItem from="1603904561887" duration="903000" />
+      <workItem from="1603905631005" duration="3674000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -140,7 +156,8 @@
     <MESSAGE value="I added the names into the rectangles" />
     <MESSAGE value="removed line chart" />
     <MESSAGE value="Fixed commented out text and color scheme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed commented out text and color scheme" />
+    <MESSAGE value="Axes should show up when you click on each state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Axes should show up when you click on each state" />
   </component>
   <component name="WindowStateProjectService">
     <state x="338" y="142" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603660360524">
@@ -155,9 +172,11 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2012" y="92" width="1736" height="976" key="DiffContextDialog/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603809038489" />
-    <state x="2552" y="162" key="FileChooserDialogImpl" timestamp="1603748445283">
-      <screen x="1920" y="0" width="1920" height="1160" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1603917265809">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603812205112" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.-144.1920.1040@0.0.1280.680" timestamp="1603917265809" />
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603676837727" />
     <state x="632" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603740407441" />
     <state x="2552" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603748445283" />
@@ -178,9 +197,14 @@
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808305583" />
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1487.-1080.1920.1040@0.0.1280.680" timestamp="1603660552586" />
     <state x="2607" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603808822000" />
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1603749028335">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="0" y="0" width="857" height="600" key="dock-window-1" timestamp="1603812063846">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="0" y="0" width="857" height="600" key="dock-window-1/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603812063846" />
+    <state x="-854" y="-851" width="672" height="608" key="search.everywhere.popup" timestamp="1603809247629">
+      <screen x="-1477" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="-854" y="-851" width="672" height="608" key="search.everywhere.popup/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603809247629" />
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603749028335" />
   </component>
 </project>

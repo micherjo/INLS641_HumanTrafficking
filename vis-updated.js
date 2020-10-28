@@ -14,6 +14,7 @@ function ready(data) {
     renderMap(data, "#mapsvg_pr", [0, 0.01, 0.02, 0.37], "Cases_per10M");
 }
 
+
 // Helper function which, given the entire stats data structure, extracts the requested rate for the requested state
 function getrate(stats, state_name, rate_type) {
     for (var i=0; i<stats.length; i++) {
@@ -73,12 +74,24 @@ function renderMap(data, svg_id, val_range, rate_type) {
     }
 
     //STATE DETAILS
-    var width = 350;
-    var height = 200;
+    // var width = 350;
+    // var height = 200;
     var margin_x = 20;
     var margin_y = 20;
 
     function updateGraphs(selectedStates) {
+
+        var height = 500;
+        var width = 500;
+        var margin = 40;
+
+        var x = d3.scaleLinear()
+            .domain([2014, 2019])
+            .range([margin, width - margin]);
+
+        var y = d3.scaleLinear()
+            .domain([400, 0])
+            .range([margin, height - margin]);
 
         //add an svg for each selected state
         var svgs = d3.select("#state-graphs")
@@ -99,12 +112,13 @@ function renderMap(data, svg_id, val_range, rate_type) {
         .attr("transform", "translate("+margin_x+", "+margin_y+")");
         
         //add a rectangle as chart background
-        g.append("rect")
-            .attr("class", "plotbg")
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("width", width)
-            .attr("height", height);
+        // this would not work with the graphs for some reason
+        // g.append("rect")
+        //     .attr("class", "plotbg")
+        //     .attr("x", 0)
+        //     .attr("y", 0)
+        //     .attr("width", width)
+        //     .attr("height", height);
 
         // Add state name to each rectangle
         g.append("text")
@@ -115,7 +129,30 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .attr("text-anchor", "middle")
             .text(function(d) { return(d); });
 
+        // Build axes and labels
+        svgs.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(0," + (500 - margin) + ")")
+            .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(6));
+
+        svgs.append("text")
+            .attr("class", "axis-label")
+            .attr("y", 495)
+            .attr("x", 500 / 2)
+            .style("text-anchor", "middle")
+            .text("Year");
+
+        svgs.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(" + (margin) + ",0)")
+            .call(d3.axisLeft(y));
+
+        svgs.append("text")
+            .attr("transform", "rotate(90)")
+            .attr("class", "axis-label")
+            .attr("y", -5)
+            .attr("x", 500 / 2)
+            .style("text-anchor", "middle")
+            .text("Number of Offenses Per 10 Million People");
     }
-
-
 }

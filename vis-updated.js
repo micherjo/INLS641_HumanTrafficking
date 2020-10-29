@@ -72,7 +72,6 @@ function renderMap(data, svg_id, val_range, rate_type) {
         }
         updateGraphs(selectedStates);
     }
-
     //STATE DETAILS
     // var width = 350;
     // var height = 200;
@@ -80,79 +79,112 @@ function renderMap(data, svg_id, val_range, rate_type) {
     var margin_y = 20;
 
     function updateGraphs(selectedStates) {
+        //get the value of the correct radio button
+        var button = document.getElementById("Age-Group");
+        selectedCategory = button.getAttribute("value");
+        //filter data based on category and selected states
+        currentState = selectedStates[selectedStates.length - 1];
+        statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState && d.category_value =="Adult";});   
+        /*
+            var height = 500;
+            var width = 500;
+            var margin = 40;
 
-        var height = 500;
-        var width = 500;
-        var margin = 40;
+            var x = d3.scaleLinear()
+                .domain([2014, 2019])
+                .range([margin, width - margin]);
 
-        var x = d3.scaleLinear()
-            .domain([2014, 2019])
-            .range([margin, width - margin]);
+            var y = d3.scaleLinear()
+                .domain([400, 0])
+                .range([margin, height - margin]);
 
-        var y = d3.scaleLinear()
-            .domain([400, 0])
-            .range([margin, height - margin]);
+            let g = svgs.append('g')
+            .attr("transform", "translate("+margin_x+", "+margin_y+")");
 
-        //add an svg for each selected state
-        var svgs = d3.select("#state-graphs")
+            // Build axes and labels
+
+            svgs.append("g")
+                .attr("class", "axis")
+                .attr("transform", "translate(" + (margin) + ",0)")
+                .call(d3.axisLeft(y));
+    */
+
+        var margin = {top: 20, right: 20, bottom: 30, left: 50},
+        width = 480 - margin.left - margin.right,
+        height = 250 - margin.top - margin.bottom;
+        
+        // set the ranges
+        var x = d3.scaleLinear().range([0, width]).domain([2014, 2019]);;
+        var y = d3.scaleLinear().range([height, 0]).domain([0, 400]);;
+        
+        //the enter selection
+        
+        var svg = d3.select("#state-graphs")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+            .attr("id", currentState);
+            console.log(currentState);
+        //the exit selection
+        d3.select("#state-graphs")
             .selectAll("svg")
             .data(selectedStates)
-            .enter()
-            .append('svg')
-            .attr("width", width)
-            .attr("height", height);
-            //remove svgs for unselected states
-            d3.select("#state-graphs")
-                .selectAll("svg")
-                .data(selectedStates)
-                .exit()
-                .remove();
+            .exit()
+            .remove();
 
-        let g = svgs.append('g')
-        .attr("transform", "translate("+margin_x+", "+margin_y+")");
+        statedata.forEach(function(d) {
+            d.date = d.year;
+            d.close = +d.avg_data_value;
+        });
+
+        let g = svg.append('g')
+            .attr("transform", "translate("+margin_x+", "+margin_y+")");
         
-        //add a rectangle as chart background
-        // this would not work with the graphs for some reason
-        // g.append("rect")
-        //     .attr("class", "plotbg")
-        //     .attr("x", 0)
-        //     .attr("y", 0)
-        //     .attr("width", width)
-        //     .attr("height", height);
+        // Add the Y Axis
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        //X Axis
+        g.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(-20," + (180) + ")")
+            .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(6));
 
         // Add state name to each rectangle
         g.append("text")
             .attr("class", "label")
-            .attr("x", 500 / 2)
+            .attr("x", 250 / 2)
             // .attr("y", height)
             .attr("dy", "1em")
             .attr("text-anchor", "middle")
-            .text(function(d) { return(d); });
+            .text(currentState);
 
-        // Build axes and labels
-        svgs.append("g")
-            .attr("class", "axis")
-            .attr("transform", "translate(0," + (500 - margin) + ")")
-            .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(6));
-
-        svgs.append("text")
+        g.append("text")
             .attr("class", "axis-label")
-            .attr("y", 495)
-            .attr("x", 500 / 2)
+            .attr("y", 210)
+            .attr("x", 250 / 2)
             .style("text-anchor", "middle")
             .text("Year");
-
-        svgs.append("g")
-            .attr("class", "axis")
-            .attr("transform", "translate(" + (margin) + ",0)")
-            .call(d3.axisLeft(y));
-
-        svgs.append("text")
-            .attr("transform", "rotate(90)")
+            
+        g.append("text")
+            .attr("transform", "rotate(-90)")
             .attr("class", "axis-label")
-            .attr("y", -5)
-            .attr("x", 500 / 2)
+            .attr("y", -60)
+            .attr("x", 0)
             .style("text-anchor", "middle")
             .text("Number of Offenses Per 10 Million People");
+
+        // define the line
+        var valueline = d3.line()
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.close); });
+
+        // Add the valueline path
+        svg.append("path")
+            .data([statedata])
+            .attr("class", "line")
+            .attr("d", valueline);  
     }
 }

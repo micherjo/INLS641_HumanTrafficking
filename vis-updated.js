@@ -54,7 +54,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
 
     //Get data for tool tip from statesformap.csv
     var map_data = data[1].filter(function(d) {return d.State && d.SumOfTotal_offenses ;});
-    console.log (map_data)
+    //console.log (map_data)
 
     map_data.forEach(function(d) {
         d.State = d.State;
@@ -67,7 +67,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
         .html(function (d) {
             let html = "<table>"
                 + "<tr>State Name: </td>" + d.State +"</td></tr>"
-                + "<tr><th>2019 Total Offenses:</th><td>" + d.SumOfTotal_offenses +"</td></tr>"
+                + "<tr><th>2014-2019 Total Offenses:</th><td>" + d.SumOfTotal_offenses +"</td></tr>"
             return html
         });
     svg.call(tool_tip)
@@ -90,15 +90,16 @@ function renderMap(data, svg_id, val_range, rate_type) {
 
 
     function selected(d) {
-    var selectedCategory = "Age Group"
+        var selectedCategory = "Race"
 
     // console.log(selectedCategory)
     d3.selectAll(("input[name='btn']")).on("change", function() {
         d3.selectAll("#current_factor").remove();
+        d3.selectAll("#current_dots").remove();
         selectedCategory = this.value
         updateGraphs(selectedStates, selectedCategory)
-        console.log("selectedCategory = " + selectedCategory)
-       // console.log("selectedStates = " +selectedStates);
+        //console.log("selectedCategory = " + selectedCategory)
+        //console.log("selectedStates = " +selectedStates);
     });
 
         if (!selectedStates.includes(d.properties.name)) {
@@ -116,24 +117,25 @@ function renderMap(data, svg_id, val_range, rate_type) {
             var index = selectedStates.indexOf(d.properties.name);
             selectedStates.splice(index, 1);
             updateGraphs(selectedStates, selectedCategory);
-            console.log("Removed state svg");
+            //console.log("Removed state svg");
 
         }
 }
 
 function updateGraphs(selectedStates, selectedCategory){
 
-    console.log("updateGraphs function activated")
+    //console.log("updateGraphs function activated")
     //filter data based on category and selected states
     currentState = selectedStates[selectedStates.length - 1];
     //currentCategory = selectedCategory
-    console.log("Current Category = " +currentCategory)
-    //console.log("Current States = " +selectedStates);
+
+    console.log("selectedCategory = " + selectedCategory)
+    console.log("Current States = " +selectedStates);
 
 
     statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
-    console.log ("state data for selected states: ")
-    console.log(statedata)
+    //console.log ("state data for selected states: ")
+    //console.log(statedata)
 
     var margin_x = 20;
     var margin_y = 20;
@@ -247,7 +249,8 @@ function updateGraphs(selectedStates, selectedCategory){
             .attr("class", "line")
             .style("stroke", function() { // Add the colours dynamically
                 return d.color = color(d.key); })
-            .attr("d", valueline(d.values));
+            .attr("d", valueline(d.values))
+            .attr("id","current_factor");
 
         // Add the Legend
         svg.append("text")
@@ -282,6 +285,7 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr('stroke-width', '20px')
         .attr('stroke', 'rgba(0,0,0,0)')
         .style('cursor', 'pointer')
+        .attr("id","current_dots")
         .on('mouseover', d => {
             div
                 .transition()

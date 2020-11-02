@@ -27,8 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Axes should show up when you click on each state">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
     </list>
@@ -113,6 +113,8 @@
       <workItem from="1603904561887" duration="903000" />
       <workItem from="1603905631005" duration="3855000" />
       <workItem from="1603978690868" duration="17277000" />
+      <workItem from="1604118842338" duration="9786000" />
+      <workItem from="1604260321320" duration="19365000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -232,26 +234,29 @@
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-144.1920.1040@0.0.1280.680" timestamp="1603919600173" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
     <state x="2270" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603808989701" />
-    <state x="2607" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603979749205">
-      <screen x="1920" y="0" width="1920" height="1160" />
+    <state x="458" y="294" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604328466864">
+      <screen x="0" y="23" width="1280" height="727" />
     </state>
     <state x="-790" y="-692" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603807768053" />
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808305583" />
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1487.-1080.1920.1040@0.0.1280.680" timestamp="1603660552586" />
     <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603926218236" />
     <state x="2607" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603979749205" />
-    <state x="0" y="0" width="857" height="600" key="dock-window-1" timestamp="1603812063846">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="458" y="294" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604328466864" />
+    <state x="1373" y="23" width="1153" height="708" key="dock-window-1" timestamp="1604331875477">
+      <screen x="1280" y="23" width="1600" height="877" />
     </state>
     <state x="0" y="0" width="857" height="600" key="dock-window-1/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603812063846" />
+    <state x="1373" y="23" width="1153" height="708" key="dock-window-1/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604331875477" />
     <state x="616" y="270" key="run.anything.popup" timestamp="1603926357701">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="616" y="270" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603926357701" />
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup" timestamp="1603982393341">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="415" y="183" width="670" height="425" key="search.everywhere.popup" timestamp="1604243318725">
+      <screen x="0" y="23" width="1280" height="727" />
     </state>
     <state x="-854" y="-851" width="672" height="608" key="search.everywhere.popup/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603809247629" />
     <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603982393341" />
+    <state x="415" y="183" width="670" height="425" key="search.everywhere.popup/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604243318725" />
   </component>
 </project>

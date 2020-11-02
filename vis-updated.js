@@ -9,7 +9,6 @@ Promise.all([
 .then(ready);
 
 
-
 // The callback which renders the page after the data has been loaded.
 function ready(data) {
     // Render the map.
@@ -43,8 +42,6 @@ function renderMap(data, svg_id, val_range, rate_type) {
     //https://codepen.io/tha-Sup3rN0va/full/jpYKKV
     let colormap = d3.scaleSequentialLog().domain([1, 400]).interpolator(d3.interpolateYlGnBu);
 
-
-
     svg.append("g")
         .attr("class", "states")
         .selectAll("path")
@@ -52,14 +49,47 @@ function renderMap(data, svg_id, val_range, rate_type) {
         .enter().append("path")
         .attr("fill", function(d) { let rate=getrate(stats, d.properties.name, rate_type); return colormap(rate);})
         .attr("d", path)
-        .on('click', selected);
-    
+        .on('click', selected)
+
+
+    //Get data for tool tip from statesformap.csv
+    var map_data = data[1].filter(function(d) {return d.State && d.SumOfTotal_offenses ;});
+    console.log (map_data)
+
+    map_data.forEach(function(d) {
+        d.State = d.State;
+        d.SumOfTotal_offenses = +d.SumOfTotal_offenses;
+    });
+// Define the tool tip to use for mouseovers.
+    let tool_tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-8, 0])
+        .html(function (d) {
+            let html = "<table>"
+                + "<tr>State Name: </td>" + d.State +"</td></tr>"
+                + "<tr><th>2019 Total Offenses:</th><td>" + d.SumOfTotal_offenses +"</td></tr>"
+            return html
+        });
+    svg.call(tool_tip)
+
+
+    // Add mouseover to the map
+    d3.select("#mapdiv")
+        // .append("path")
+        .attr("class", "states")
+        //.selectAll("path")
+        .data(map_data)
+        // .attr("d", path)
+        .on('mouseover', tool_tip.show)
+        .on('mouseout', tool_tip.hide)
+
+
+
     //create array for selected states
     let selectedStates=[];
 
 
-
-function selected(d) {
+    function selected(d) {
     var selectedCategory = "Age Group"
 
     // console.log(selectedCategory)
@@ -68,7 +98,7 @@ function selected(d) {
         selectedCategory = this.value
         updateGraphs(selectedStates, selectedCategory)
         console.log("selectedCategory = " + selectedCategory)
-        console.log("selectedStates = " +selectedStates);
+       // console.log("selectedStates = " +selectedStates);
     });
 
         if (!selectedStates.includes(d.properties.name)) {
@@ -97,10 +127,11 @@ function updateGraphs(selectedStates, selectedCategory){
     //filter data based on category and selected states
     currentState = selectedStates[selectedStates.length - 1];
     //currentCategory = selectedCategory
-    //console.log("Current Category = " +currentCategory)
+    console.log("Current Category = " +currentCategory)
     //console.log("Current States = " +selectedStates);
 
-    statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;});
+
+    statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
     console.log ("state data for selected states: ")
     console.log(statedata)
 
@@ -125,7 +156,6 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("transform","translate(" + margin.left + "," + margin.top + ")")
         .attr("id", currentState);
 
-
     //the exit selection
     d3.select("#state-graphs")
         .selectAll("svg")
@@ -140,6 +170,7 @@ function updateGraphs(selectedStates, selectedCategory){
 
     let g = svg.append('g')
         .attr("transform", "translate("+margin_x+", "+margin_y+")");
+
 
     // Add the Y Axis
     svg.append("g")
@@ -180,13 +211,101 @@ function updateGraphs(selectedStates, selectedCategory){
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.close); });
 
+
     // Add the valueline path
-    svg.append("path")
-        .data([statedata])
-        .attr("class", "line")
-        .attr("d", valueline)
-        .attr("id","current_factor");
+ //   svg.append("path")
+ //       .data([statedata])
+      //  .attr("class", "line")
+    //    .attr("d", valueline)
+  //      .attr("id","current_factor");
+
+    // Adds the svg canvas
+    d3.select("#state-graphs")
+        .select('body')
+        .append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+    // Nest the entries by symbol
+    var dataNest = d3.nest()
+        .key(function(d) {return d.category_value;})
+        .entries(statedata);
+
+    // set the colour scale
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+
+
+    legendSpace = width/dataNest.length; // spacing for the legend
+
+    // Loop through each symbol / key
+    dataNest.forEach(function(d,i) {
+
+        svg.append("path")
+            .attr("class", "line")
+            .style("stroke", function() { // Add the colours dynamically
+                return d.color = color(d.key); })
+            .attr("d", valueline(d.values));
+
+        // Add the Legend
+        svg.append("text")
+            .attr("x", (legendSpace/2)+i*legendSpace)  // space legend
+            .attr("y", height + (margin.bottom/1)+ 2)
+            .attr("class", "legend")    // style the legend
+            .style("fill", function() { // Add the colours dynamically
+                return d.color = color(d.key); })
+            .text(d.key);
+
+    });
+
+
+
+    // Define the div for the tooltip
+    const div = d3
+        .select('body')
+        .append('div')
+        .attr('class', 'tooltip')
+        .style('opacity', 0);
+
+
+    // Add the scatterplot
+    svg
+        .selectAll('dot')
+        .data(statedata)
+        .enter()
+        .append('circle')
+        .attr('r', 3)
+        .attr('cx', d => x(d.date))
+        .attr('cy', d => y(d.close))
+        .attr('stroke-width', '20px')
+        .attr('stroke', 'rgba(0,0,0,0)')
+        .style('cursor', 'pointer')
+        .on('mouseover', d => {
+            div
+                .transition()
+                .duration(200)
+                .style('opacity', 0.9);
+            div
+                .html(d.date + '<br/>' + d.close)
+                .style('left', d3.event.pageX + 'px')
+                .style('top', d3.event.pageY - 28 + 'px');
+        })
+        .on('mouseout', () => {
+            div
+                .transition()
+                .duration(500)
+                .style('opacity', 0);
+        });
+
+
+
 
     d3.select("#lineChart-radioInputs").style("display", "block");
+
+
 }
+
 }
+

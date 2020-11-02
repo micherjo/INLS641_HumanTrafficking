@@ -61,3 +61,22 @@ h2 {
     stroke: steelblue;
     stroke-width: 2px;
   }
+
+div.tooltip {
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: rgba(0,0,0,.8);
+    border: 2px solid black;
+    pointer-events: none;
+}
+
+.legend {
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: end;
+}

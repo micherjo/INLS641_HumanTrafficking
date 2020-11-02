@@ -277,15 +277,6 @@ function updateGraphs(selectedStates, selectedCategory){
                 return d.category_value;
             });
 
-      //  svg.append("text")
-       //     .attr("x", (legendSpace/2)+i*legendSpace)  // space legend
-       //     .attr("y", height + (margin.bottom/1)+ 2)
-      //      .attr("x", (width - 24) + (legendSpace/2)+i*10)
-      //      .attr("y", 9)
-      //      .attr("class", "legend")    // style the legend
-       //     .style("fill", function() { // Add the colours dynamically
-         //       return d.color = color(d.key); })
-        //    .text(d.key);
 
     });
 

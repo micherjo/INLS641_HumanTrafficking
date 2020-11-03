@@ -93,15 +93,8 @@ function renderMap(data, svg_id, val_range, rate_type) {
         var selectedCategory = "Race"
 
     // console.log(selectedCategory)
-    d3.selectAll(("input[name='btn']")).on("change", function() {
-        d3.selectAll("#current_factor").remove();
-        d3.selectAll("#current_dots").remove();
-        selectedCategory = this.value
-        updateGraphs(selectedStates, selectedCategory)
-        //console.log("selectedCategory = " + selectedCategory)
-        //console.log("selectedStates = " +selectedStates);
-    });
-
+    
+    
         if (!selectedStates.includes(d.properties.name)) {
 
                 d3.select(this).classed('selected', true).raise();
@@ -124,13 +117,9 @@ function renderMap(data, svg_id, val_range, rate_type) {
 
 function updateGraphs(selectedStates, selectedCategory){
 
-    //console.log("updateGraphs function activated")
     //filter data based on category and selected states
     currentState = selectedStates[selectedStates.length - 1];
     //currentCategory = selectedCategory
-
-    console.log("selectedCategory = " + selectedCategory)
-    console.log("Current States = " +selectedStates);
 
 
     statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
@@ -152,23 +141,20 @@ function updateGraphs(selectedStates, selectedCategory){
 
     var svg = d3.select("#state-graphs")
         .append("svg")
+        .attr("id", currentState)
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
-        .attr("transform","translate(" + margin.left + "," + margin.top + ")")
-        .attr("id", currentState);
-
+        .attr("transform","translate(" + margin.left + "," + margin.top + ")");
+console.log(document.getElementById("Texas"));
+console.log(svg);
     //the exit selection
+    
     d3.select("#state-graphs")
         .selectAll("svg")
         .data(selectedStates)
         .exit()
         .remove();
-
-    statedata.forEach(function(d) {
-        d.date = d.year;
-        d.close = +d.avg_data_value;
-    });
 
     let g = svg.append('g')
         .attr("transform", "translate("+margin_x+", "+margin_y+")");
@@ -184,34 +170,10 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("transform", "translate(-20," + (180) + ")")
         .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(6));
 
-    // Add state name to each rectangle
-    g.append("text")
-        .attr("class", "label")
-        .attr("x", 250 / 2)
-        // .attr("y", height)
-        .attr("dy", "1em")
-        .attr("text-anchor", "middle")
-        .text(currentState);
-
-    g.append("text")
-        .attr("class", "axis-label")
-        .attr("y", 210)
-        .attr("x", 250 / 2)
-        .style("text-anchor", "middle")
-        .text("Year");
-
-    g.append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("class", "axis-label")
-        .attr("y", -60)
-        .attr("x", 0)
-        .style("text-anchor", "middle")
-        .text("Number of Offenses Per 10 Million People");
-
     // define the line
     var valueline = d3.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.close); });
+    .x(function(d) { return x(d.year); })
+    .y(function(d) { return y(d.avg_data_value); });
 
 
     // Add the valueline path
@@ -234,17 +196,15 @@ function updateGraphs(selectedStates, selectedCategory){
     var dataNest = d3.nest()
         .key(function(d) {return d.category_value;})
         .entries(statedata);
-
+        
     // set the colour scale
     var color = d3.scaleOrdinal(d3.schemeCategory10);
-
-
 
     legendSpace = width/dataNest.length; // spacing for the legend
 
     // Loop through each symbol / key
     dataNest.forEach(function(d,i) {
-
+        console.log(d);
         svg.append("path")
             .attr("class", "line")
             .style("stroke", function() { // Add the colours dynamically
@@ -263,8 +223,6 @@ function updateGraphs(selectedStates, selectedCategory){
 
     });
 
-
-
     // Define the div for the tooltip
     const div = d3
         .select('body')
@@ -280,8 +238,8 @@ function updateGraphs(selectedStates, selectedCategory){
         .enter()
         .append('circle')
         .attr('r', 3)
-        .attr('cx', d => x(d.date))
-        .attr('cy', d => y(d.close))
+        .attr('cx', d => x(d.year))
+        .attr('cy', d => y(d.avg_data_value))
         .attr('stroke-width', '20px')
         .attr('stroke', 'rgba(0,0,0,0)')
         .style('cursor', 'pointer')
@@ -292,7 +250,7 @@ function updateGraphs(selectedStates, selectedCategory){
                 .duration(200)
                 .style('opacity', 0.9);
             div
-                .html(d.date + '<br/>' + d.close)
+                .html(d.year + '<br/>' + d.avg_data_value)
                 .style('left', d3.event.pageX + 'px')
                 .style('top', d3.event.pageY - 28 + 'px');
         })
@@ -303,12 +261,118 @@ function updateGraphs(selectedStates, selectedCategory){
                 .style('opacity', 0);
         });
 
-
-
-
     d3.select("#lineChart-radioInputs").style("display", "block");
 
+    d3.selectAll(("input[name='btn']")).on("change", function() {
+        //d3.selectAll("#current_factor").remove();
+        //d3.selectAll("#current_dots").remove();
+        selectedCategory = this.value
+        updateLines(selectedStates, selectedCategory)
+        //console.log("selectedCategory = " + selectedCategory)
+        //console.log("selectedStates = " +selectedStates);
+    });
 
+    function updateLines(selectedStates, selectedCategory){
+        
+        d3.selectAll("#current_factor").remove();
+        d3.selectAll("#current_dots").remove();
+        let j = 0;
+        while (j< selectedStates.length) {
+        
+
+        currentState = selectedStates[j];
+        console.log(currentState);
+    
+        statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState;});
+    
+        var valueline = d3.line()
+        .x(function(d) {return x(d.year); })
+        .y(function(d) {return y(d.avg_data_value); });
+    
+        var dataNest = d3.nest()
+        .key(function(d) { return d.category_value;})
+        .entries(statedata);
+            console.log(statedata); //is ok here
+
+        legendSpace = width/dataNest.length; // spacing for the legend
+
+        dataNest.forEach(function(d,i) { console.log(d);
+            //svg=document.getElementById(currentState);
+            d3.select("#"+ currentState)
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+                .append("path")
+                .attr("class", "line")
+                .style("stroke", function() { // Add the colours dynamically
+                    return d.color = color(d.key); })
+                .attr("d", valueline(d.values))
+                .attr("id","current_factor");
+                
+            // Add the Legend
+            svg.selectAll("text")
+                .attr("x", (legendSpace/2)+i*legendSpace)  // space legend
+                .attr("y", height + (margin.bottom/1)+ 2)
+                .attr("class", "legend")    // style the legend
+                .style("fill", function() { // Add the colours dynamically
+                    return d.color = color(d.key); })
+                .text(d.key);
+    
+        });
+            // Add the Y Axis
+            svg.append("g")
+            .call(d3.axisLeft(y));
+
+            //X Axis
+            g.append("g")
+                .attr("class", "axis")
+                .attr("transform", "translate(-20," + (180) + ")")
+                .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(6));
+            // Define the div for the tooltip
+            const div = d3
+            .select('body')
+            .append('div')
+            .attr('class', 'tooltip')
+            .style('opacity', 0);
+
+        // Add the scatterplot
+        d3.select("#"+ currentState)
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+            .selectAll('dot')
+            .data(statedata)
+            .enter()
+            .append('circle')
+            .attr('r', 3)
+            .attr('cx', d => x(d.year))
+            .attr('cy', d => y(d.avg_data_value))
+            .attr('stroke-width', '20px')
+            .attr('stroke', 'rgba(0,0,0,0)')
+            .style('cursor', 'pointer')
+            .attr("id","current_dots")
+            .on('mouseover', d => {
+                div
+                    .transition()
+                    .duration(200)
+                    .style('opacity', 0.9);
+                div
+                    .html(d.year + '<br/>' + d.avg_data_value)
+                    .style('left', d3.event.pageX + 'px')
+                    .style('top', d3.event.pageY - 28 + 'px');
+            })
+            .on('mouseout', () => {
+                div
+                    .transition()
+                    .duration(500)
+                    .style('opacity', 0);
+            });
+            j++;
+        }
+        
+    }
 }
 
 }

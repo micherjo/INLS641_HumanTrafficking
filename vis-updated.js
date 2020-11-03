@@ -169,6 +169,14 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("transform", "translate(-20," + (180) + ")")
         .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(6));
 
+    g.append("text")
+        .attr("class", "label")
+        .attr("x", 250 / 2)
+        // .attr("y", height)
+        .attr("dy", "1em")
+        .attr("text-anchor", "middle")
+        .text(currentState);
+
     // define the line
     var valueline = d3.line()
     .x(function(d) { return x(d.year); })

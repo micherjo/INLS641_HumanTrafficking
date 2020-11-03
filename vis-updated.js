@@ -364,15 +364,7 @@ function updateGraphs(selectedStates, selectedCategory){
                 });
 
         });
-            // Add the Y Axis
-            svg.append("g")
-            .call(d3.axisLeft(y));
-
-            //X Axis
-            g.append("g")
-                .attr("class", "axis")
-                .attr("transform", "translate(-20," + (180) + ")")
-                .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(6));
+        
             // Define the div for the tooltip
             const div = d3
             .select('body')

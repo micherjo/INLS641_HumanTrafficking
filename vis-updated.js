@@ -212,16 +212,35 @@ console.log(svg);
             .attr("d", valueline(d.values))
             .attr("id","current_factor");
 
-        // Add the Legend
-        svg.append("text")
-            .attr("x", (legendSpace/2)+i*legendSpace)  // space legend
-            .attr("y", height + (margin.bottom/1)+ 2)
-            .attr("class", "legend")    // style the legend
-            .style("fill", function() { // Add the colours dynamically
-                return d.color = color(d.key); })
-            .text(d.key);
+        var legend = svg.selectAll('g.legend')
+            .data(statedata)
+            .enter()
+            .append('g')
+            .attr('class', 'legend');
+
+        legend.append('rect')
+            .attr('x', width + margin.right - 110 - 20)
+            .attr('y', function (d, i) {
+                return i * 20;
+            })
+            .attr('width', 10)
+            .attr('height', 10)
+            .style('fill', function (d) {
+                return color(d.category_value);
+            });
+
+        legend.append('text')
+            .attr('x', width + margin.right - 50 - 8)
+            .attr('y', function (d, i) {
+                return (i * 20) + 9;
+            })
+            .text(function (d, i) {
+                return d.category_value;
+            });
+
 
     });
+
 
     // Define the div for the tooltip
     const div = d3

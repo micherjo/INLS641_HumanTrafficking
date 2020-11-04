@@ -93,8 +93,8 @@ function renderMap(data, svg_id, val_range, rate_type) {
         var selectedCategory = "Race"
 
     // console.log(selectedCategory)
-    
-    
+
+
         if (!selectedStates.includes(d.properties.name)) {
 
                 d3.select(this).classed('selected', true).raise();
@@ -129,7 +129,7 @@ function updateGraphs(selectedStates, selectedCategory){
     var margin_x = 20;
     var margin_y = 20;
 
-    var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    var margin = {top: 20, right: 120, bottom: 30, left: 50},
     width = 480 - margin.left - margin.right,
     height = 250 - margin.top - margin.bottom;
 
@@ -148,7 +148,7 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
     //the exit selection
-    
+
     d3.select("#state-graphs")
         .selectAll("svg")
         .data(selectedStates)
@@ -203,7 +203,7 @@ function updateGraphs(selectedStates, selectedCategory){
     var dataNest = d3.nest()
         .key(function(d) {return d.category_value;})
         .entries(statedata);
-        
+
     // set the colour scale
     var color = d3.scaleOrdinal(d3.schemeCategory10);
 
@@ -226,7 +226,7 @@ function updateGraphs(selectedStates, selectedCategory){
             .attr('class', 'legend');
 
         legend.append('rect')
-            .attr('x', width + margin.right - 110 - 20)
+            .attr('x', width + margin.right - 20 - 10)
             .attr('y', function (d, i) {
                 return i * 20;
             })
@@ -299,22 +299,22 @@ function updateGraphs(selectedStates, selectedCategory){
     });
 
     function updateLines(selectedStates, selectedCategory){
-        
+
         d3.selectAll("#current_factor").remove();
         d3.selectAll("#current_dots").remove();
         let j = 0;
         while (j< selectedStates.length) {
-        
+
 
         currentState = selectedStates[j];
         console.log(currentState);
-    
+
         statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState;});
-    
+
         var valueline = d3.line()
         .x(function(d) {return x(d.year); })
         .y(function(d) {return y(d.avg_data_value); });
-    
+
         var dataNest = d3.nest()
         .key(function(d) { return d.category_value;})
         .entries(statedata);
@@ -335,7 +335,7 @@ function updateGraphs(selectedStates, selectedCategory){
                     return d.color = color(d.key); })
                 .attr("d", valueline(d.values))
                 .attr("id","current_factor");
-                
+
             // Add the Legend
             var legend = svg.selectAll('g.legend')
             .data(statedata)
@@ -364,7 +364,7 @@ function updateGraphs(selectedStates, selectedCategory){
                 });
 
         });
-        
+
             // Define the div for the tooltip
             const div = d3
             .select('body')
@@ -407,7 +407,7 @@ function updateGraphs(selectedStates, selectedCategory){
             });
             j++;
         }
-        
+
     }
 }
 

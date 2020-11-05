@@ -75,6 +75,14 @@ div.tooltip {
     pointer-events: none;
 }
 
+.d3-tip {
+    line-height: 1;
+    padding: 12px;
+    background: rgba(43,43,43, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
 .legend {
     font-size: 12px;
     font-weight: bold;

@@ -4,41 +4,50 @@
 .states :hover {
     opacity: 50%;
 }
+.State-Comparisons{
+    font-family: Open Sans, sans-serif;
+}
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
 }
 h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 30px;
 }
 #mapdiv {
-    width: 100%; 
+    width: 100%;
     height: 700px;
     fill: url(#hash);
+    font-family: Open Sans, sans-serif;
+
 }
 #mapsvg_pr {
     margin-left:70px;
-    width: 1000px; 
+    width: 1000px;
     height: 600px;
+    font-family: Open Sans, sans-serif;
 }
 #hash-g {
-    fill: none; 
-    stroke: rgb(202, 202, 202); 
+    fill: none;
+    stroke: rgb(202, 202, 202);
     stroke-width: 7px;
 }
 .heading {
-    width: 1050px; 
+    width: 1050px;
     margin-left: 100px;
     margin-top: 40px;
+
 }
 #state-comparison {
     margin: 20px;
     margin-left: 100px;
+    font-family: Open Sans, sans-serif;
 }
 #state-graphs {
-    width: 1050px; 
+    width: 1050px;
     margin-top: 50px;
+    font-family: Open Sans, sans-serif;
 }
 .state-borders {
     fill: none;
@@ -63,14 +72,15 @@ h2 {
   }
 
 div.tooltip {
-    color: white;
+    color: black;
     position: absolute;
     text-align: center;
     width: 60px;
     height: 28px;
     padding: 2px;
-    font: 12px sans-serif;
-    background: rgba(0,0,0,.8);
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    background: white;
     border: 2px solid black;
     pointer-events: none;
 }
@@ -89,6 +99,6 @@ div.tooltip {
     font-size: 12px;
     font-weight: bold;
     text-anchor: end;
-    font: 11px sans-serif;
+    font: 11px Open Sans;
 
 }

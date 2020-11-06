@@ -43,7 +43,6 @@ function renderMap(data, svg_id, val_range, rate_type) {
     let colormap = d3.scaleSequentialLog().domain([1, 400]).interpolator(d3.interpolateYlGnBu);
 
     var map_data = stats.filter(function(d) {return d.State && d.SumOfTotal_offenses ;});
-    console.log(map_data)
 
 
     // Define the tool tip to use for mouseovers.
@@ -71,11 +70,6 @@ function renderMap(data, svg_id, val_range, rate_type) {
 
 
 
-
-
-
-
-
     //create array for selected states
     let selectedStates=[];
 
@@ -99,15 +93,19 @@ function renderMap(data, svg_id, val_range, rate_type) {
         else {
             d3.select(this).classed('selected', false);
             var index = selectedStates.indexOf(d.properties.name);
+            var state_removed = d.properties.name
             selectedStates.splice(index, 1);
+            console.log(state_removed)
+            console.log(selectedStates)
+            d3.select("#"+ state_removed).remove()
             updateGraphs(selectedStates, selectedCategory);
-            //console.log("Removed state svg");
 
         }
     }
 
 
     function updateGraphs(selectedStates, selectedCategory){
+
 
         //filter data based on category and selected states
         currentState = selectedStates[selectedStates.length - 1];
@@ -139,6 +137,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .append("g")
             .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
+
         //the exit selection
 
         d3.select("#state-graphs")
@@ -164,7 +163,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .attr("class", "label")
             .attr("x", 250 / 2)
             // .attr("y", height)
-            .attr("dy", "1em")
+            .attr("dy", "-1em")
             .attr("text-anchor", "middle")
             .text(currentState);
 

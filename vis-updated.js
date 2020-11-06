@@ -53,7 +53,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
         .html(function (d) {
             let html = "<table>"
                 + "<tr>State Name: </td>" + d.properties.name +"</td></tr>"
-                + "<tr><th>2014-2019 Total Offenses:</th><td>" + rate_type +"</td></tr>"
+                + "<tr><th>2014-2019 Total Offenses:</th><td>" + getrate(stats, d.properties.name, rate_type);  +"</td></tr>"
             return html
         });
     svg.call(tool_tip)

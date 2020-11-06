@@ -97,7 +97,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             selectedStates.splice(index, 1);
             console.log(state_removed)
             console.log(selectedStates)
-            d3.select("#"+ state_removed).remove()
+            d3.selectAll("#"+ state_removed).remove()
             updateGraphs(selectedStates, selectedCategory);
 
         }

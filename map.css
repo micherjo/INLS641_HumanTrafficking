@@ -83,8 +83,12 @@ div.tooltip {
     border-radius: 2px;
 }
 
+
 .legend {
+    position:absolute;
     font-size: 12px;
     font-weight: bold;
     text-anchor: end;
+    font: 11px sans-serif;
+
 }

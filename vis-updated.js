@@ -60,26 +60,23 @@ function renderMap(data, svg_id, val_range, rate_type) {
     function selected(d) {
         var selectedCategory = "Age Group"
 
-    // console.log(selectedCategory)
-    
-    
         if (!selectedStates.includes(d.properties.name)) {
 
                 d3.select(this).classed('selected', true).raise();
                 selectedStates.push(d.properties.name);
                 updateGraphs(selectedStates, selectedCategory)
-                //console.log("Added state svg");
-
         }
             //to clear all: d3.select('.selected').classed('selected', false);
         //unselect states when clicked on again
         else {
             d3.select(this).classed('selected', false);
             var index = selectedStates.indexOf(d.properties.name);
+            var remover = d.properties.name;
             selectedStates.splice(index, 1);
-            updateGraphs(selectedStates, selectedCategory);
-            //console.log("Removed state svg");
-
+            console.log(d.properties.name);
+            console.log(selectedStates)
+            console.log(index)
+            updateGraphs(selectedStates, selectedCategory)
         }
 }
 
@@ -90,10 +87,8 @@ function updateGraphs(selectedStates, selectedCategory){
     currentState = selectedStates[selectedStates.length - 1];
     //currentCategory = selectedCategory
 
-
     statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
-    //console.log ("state data for selected states: ")
-    //console.log(statedata)
+
 
     var margin_x = 20;
     var margin_y = 20;
@@ -117,7 +112,7 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
     //the exit selection
-    
+
     d3.select("#state-graphs")
         .selectAll("svg")
         .data(selectedStates)
@@ -163,7 +158,7 @@ function updateGraphs(selectedStates, selectedCategory){
     var dataNest = d3.nest()
         .key(function(d) {return d.category_value;})
         .entries(statedata);
-        
+
     // set the colour scale
     var color = d3.scaleOrdinal(d3.schemeCategory10);
 
@@ -272,7 +267,7 @@ function updateGraphs(selectedStates, selectedCategory){
     });
 
     function updateLines(selectedStates, selectedCategory){
-        
+
         d3.selectAll("#current_factor").remove();
         d3.selectAll("#current_dots").remove();
         d3.selectAll("#current_legend").remove();
@@ -280,17 +275,16 @@ function updateGraphs(selectedStates, selectedCategory){
 
         let j = 0;
         while (j< selectedStates.length) {
-        
 
         currentState = selectedStates[j];
-        console.log(currentState);
-    
+        //console.log(currentState);
+
         statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState;});
-    
+
         var valueline = d3.line()
         .x(function(d) {return x(d.year); })
         .y(function(d) {return y(d.avg_data_value); });
-    
+
         var dataNest = d3.nest()
         .key(function(d) { return d.category_value;})
         .entries(statedata);
@@ -351,7 +345,7 @@ function updateGraphs(selectedStates, selectedCategory){
 
 
         });
-        
+
             // Define the div for the tooltip
             const div = d3
             .select('body')
@@ -394,7 +388,7 @@ function updateGraphs(selectedStates, selectedCategory){
             });
             j++;
         }
-        
+
     }
 }
 

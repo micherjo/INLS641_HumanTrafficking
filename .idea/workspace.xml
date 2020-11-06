@@ -28,7 +28,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Fixed margin.right to put legend outside the graph">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,17 +216,18 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2560" y="315" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603747637398" />
-    <state x="2012" y="92" width="1736" height="976" key="DiffContextDialog" timestamp="1603809038489">
-      <screen x="1920" y="0" width="1920" height="1160" />
+    <state x="92" y="92" width="1736" height="976" key="DiffContextDialog" timestamp="1604695361872">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
+    <state x="92" y="92" width="1736" height="976" key="DiffContextDialog/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604695361872" />
     <state x="2012" y="92" width="1736" height="976" key="DiffContextDialog/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603809038489" />
-    <state x="632" y="162" key="FileChooserDialogImpl" timestamp="1604465266325">
+    <state x="632" y="162" key="FileChooserDialogImpl" timestamp="1604696905530">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603812205112" />
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.-144.1920.1040@0.0.1280.680" timestamp="1603917265809" />
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603676837727" />
-    <state x="632" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604465266325" />
+    <state x="632" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604696905530" />
     <state x="2552" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603748445283" />
     <state width="1259" height="226" key="GridCell.Tab.0.bottom" timestamp="1604539911251">
       <screen x="0" y="23" width="1280" height="727" />
@@ -308,10 +308,10 @@
     </state>
     <state x="0" y="0" width="857" height="600" key="dock-window-1/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603812063846" />
     <state x="1373" y="23" width="1153" height="708" key="dock-window-1/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604331875477" />
-    <state x="616" y="270" key="run.anything.popup" timestamp="1603926357701">
+    <state x="616" y="270" key="run.anything.popup" timestamp="1604696235135">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="616" y="270" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603926357701" />
+    <state x="616" y="270" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604696235135" />
     <state x="415" y="183" width="670" height="425" key="search.everywhere.popup" timestamp="1604243318725">
       <screen x="0" y="23" width="1280" height="727" />
     </state>

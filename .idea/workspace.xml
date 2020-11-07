@@ -5,9 +5,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="I updated the legend so it works along with the lines">
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Update to removal selection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +153,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604703589264</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Font updates and fixed the selection issue by removing the most recently selected state">
+      <created>1604706960622</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604706960622</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update to removal selection">
+      <created>1604707052799</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604707052799</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +215,9 @@
     <MESSAGE value="Fixed margin.right to put legend outside the graph" />
     <MESSAGE value="I updated the legend so it works along with the lines" />
     <MESSAGE value="Working on the tooltip together" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on the tooltip together" />
+    <MESSAGE value="Font updates and fixed the selection issue by removing the most recently selected state" />
+    <MESSAGE value="Update to removal selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to removal selection" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#Plugins" timestamp="1603924890272">
@@ -287,14 +302,14 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2381" y="224" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603978825081" />
-    <state x="1571" y="97" key="Vcs.Push.Dialog.v2" timestamp="1604703707765">
-      <screen x="1280" y="0" width="1600" height="900" />
+    <state x="350" y="125" key="Vcs.Push.Dialog.v2" timestamp="1604707054289">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808405722" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-144.1920.1040@0.0.1280.680" timestamp="1603919600173" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
     <state x="1571" y="97" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.0.1600.900@1280.0.1600.900" timestamp="1604703707765" />
-    <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604465874404" />
+    <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604707054289" />
     <state x="2270" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1604343490085" />
     <state x="233" y="101" key="Vcs.Push.Dialog.v2/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604541980101" />
     <state x="1853" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604703697934">

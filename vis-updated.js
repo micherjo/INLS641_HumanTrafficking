@@ -79,14 +79,10 @@ function renderMap(data, svg_id, val_range, rate_type) {
 
         // console.log(selectedCategory)
 
-
         if (!selectedStates.includes(d.properties.name)) {
-
             d3.select(this).classed('selected', true).raise();
             selectedStates.push(d.properties.name);
             updateGraphs(selectedStates, selectedCategory)
-            //console.log("Added state svg");
-
         }
             //to clear all: d3.select('.selected').classed('selected', false);
         //unselect states when clicked on again
@@ -94,12 +90,10 @@ function renderMap(data, svg_id, val_range, rate_type) {
             d3.select(this).classed('selected', false);
             var index = selectedStates.indexOf(d.properties.name);
             var state_removed = d.properties.name
-            selectedStates.splice(index, 1);
             console.log(state_removed)
-            console.log(selectedStates)
             d3.selectAll("#"+ state_removed).remove()
+            selectedStates.splice(index, 1);
             updateGraphs(selectedStates, selectedCategory);
-
         }
     }
 

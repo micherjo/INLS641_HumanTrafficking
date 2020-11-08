@@ -14,8 +14,8 @@ The ultimate goal of this project would be to create a visualization that could 
 
 We would like to dedicate a portion of our visualization to discussing what laws are in place in each US state. This way, policymakers could look at the numbers and see what clusters have in common when it comes to laws. This could more clearly illustrate what needs to be done to combat human trafficking from a legislative point of view. After all, policymakers are those who can affect the most real change when it comes to prevention of this crime. 
 
-## Click here to view the visualization:
-[![alt text](https://micherjo.github.io/INLS641_HumanTrafficking/map.png "link to map")](https://micherjo.github.io/INLS641_HumanTrafficking/map.html)
+## Click below to view the visualization:
+[![alt text](https://micherjo.github.io/INLS641_HumanTrafficking/map.png "link to map")](https://micherjo.github.io/INLS641_HumanTrafficking/about)
   
   
 # Motivation
@@ -46,9 +46,10 @@ While human trafficking is an uncomfortable and difficult topic for most people 
 
 All the datasets required for this project can be found on the FBI Uniform Crime Reporting (UCR) site. The data is gathered by the federal government from police departments throughout the United States. There is an entire section dedicated to human trafficking, and there are multiple relevant datasets that we plan to use. The datasets show reported cases based on type of crime, gender, race, ethnicity, and age group (minor vs. adult). Data is available for each year collected (currently from 2015 to 2018), so trends over time could also be analyzed if desired. The data is available in CSV files, and it will be stored as such in a shared Git repository that can be accessed by all group members, together with the rest of the project resources. The FBI datasets are missing data on some states due to underreporting of human trafficking cases, but this could help us to make a statement about the need to report these cases more regularly. In addition to the FBI data, there is also a global dataset of human trafficking reports available through the Counter Trafficking Data Collaborative (CTDC) website. This dataset includes information about the type of crime and age group of the victim, collected from 2002 through 2019. It is also available as a CSV file and could be used to supplement the FBI dataset, depending on what data needs emerge during our analysis.
 We plan to display the data in two ways. One graph will be comparing states by showing the data as it is - in raw numbers. The other graph will show the data as percentages of a whole (ex: percentage of trafficked minors who identify as African American) by state. This will allow for easier comparison between states based on specific categories. We are also going to look at information about human trafficking policies in different states. According to the Office of Justice Programs website, “There may be subtle or large differences between state and federal laws, but they help victims of trafficking receive services from multiple providers and help law enforcement address these crimes at different levels.” If we are able to find enough relevant data and if time permits, we may try to provide more detailed information for each state based on their policies.
-FBI Data: https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/additional-data-collections/human-trafficking
-CTDC Data: https://www.ctdatacollaborative.org/download-global-dataset
-Human trafficking laws resource: https://polarisproject.org/resources/state-ratings-on-human-trafficking-laws/
+
+- FBI Data: https://ucr.fbi.gov/crime-in-the-u.s/2018/crime-in-the-u.s.-2018/additional-data-collections/human-trafficking
+- CTDC Data: https://www.ctdatacollaborative.org/download-global-dataset
+- Human trafficking laws resource: https://polarisproject.org/resources/state-ratings-on-human-trafficking-laws/
 
 # Tasks:
 

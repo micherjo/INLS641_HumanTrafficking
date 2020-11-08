@@ -1,5 +1,4 @@
-"INLS 641 - Human Trafficking" 
-@@ -0,0 +1,115 @@
+
 ## Human Trafficking across the U.S.
 
 

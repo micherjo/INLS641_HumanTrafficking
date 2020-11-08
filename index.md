@@ -1,11 +1,8 @@
 
 ## Human Trafficking across the U.S.
 
-
-INLS 641 - Information Visualization
-A3: Revised Proposal
 Team Members: Laura Haller; Michelle Johnson; Stacy McDonald; Mara Negrut
-Topic: Human Trafficking across the U.S.
+
 
 # Introduction
 Our project will highlight the horrific issue of Human Trafficking right here in the United States. The data will represent the number of reported human trafficking crimes by categories such as: specific type of trafficking crime, age of victim (minor or adult), ethnicity, and race. This would hopefully highlight the disparities between different groups when it comes to this type of crime. 

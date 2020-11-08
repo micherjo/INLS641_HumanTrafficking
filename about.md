@@ -1,11 +1,4 @@
 
----
-layout: default
-title: Another page
-description: This is just another page
----
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

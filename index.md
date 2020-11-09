@@ -75,6 +75,16 @@ We expect our target users will use the visualization to compare the statistics 
 - resenting human trafficking enforcement data to relevant audiences (non-profits, policymakers, FBI units) in an easily digestible manner.  
 
 
+# Process summary:
+
+The process itself
+- Did we stick to our original plans?
+- What stayed the same: goal of the visualization, the variables/categories shown, the idea of having one overall picture and then details about individual states
+- What changed: we decided to use a map, we decided on line graphs instead of bar charts, we are showing/comparing only one variable at a time, we didn’t add details about the policies (so far)
+- Were some parts harder/easier/more time consuming than expected?
+-Easier than expected: map visualization, filtering the data for each graph
+- Harder/more time consuming: data wrangling, linking the two parts of our visualization, tooltip, legend
+- Reflections on how the project progressed
 
 
 ----------------------------------------------------------------------------------------------------------------------

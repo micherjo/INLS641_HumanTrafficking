@@ -102,3 +102,6 @@ div.tooltip {
     font: 11px Open Sans;
 
 }
+.axis-label {
+    font-size: 12px;
+}

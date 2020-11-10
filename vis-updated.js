@@ -181,6 +181,21 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("text-anchor", "middle")
         .text(currentState);
 
+    g.append("text")
+        .attr("transform", "rotate(270)")
+        .attr("class", "axis-label")
+        .attr("y", -50)
+        .attr("x", -80)
+        .style("text-anchor", "middle")
+        .text("Number of Cases Per 10M People");
+    
+    g.append("text")
+        .attr("class", "axis-label")
+        .attr("y", 200)
+        .attr("x", 175)
+        .style("text-anchor", "middle")
+        .text("Year");
+    
     // Define a d3 line called valueline based on avg_data_values
     var valueline = d3.line()
         .x(function(d) { return x(d.year); })
@@ -239,7 +254,7 @@ function updateGraphs(selectedStates, selectedCategory){
             legend.append("rect")
                 .attr("x", width + margin.right - 10 - 20)
                 .attr("y", function (d, i) {return i * 20;})
-                .attr("width", 40)
+                .attr("width", 10)
                 .attr("height", 10)
                 .style("fill", function (d) {return color(d) ; })
         })
@@ -301,7 +316,6 @@ function updateLines(selectedStates, selectedCategory){
     d3.selectAll("#current_dots").remove();
     d3.selectAll("#current_legend").remove();
 
-
     let j = 0;
     while (j< selectedStates.length) {
 
@@ -318,7 +332,7 @@ function updateLines(selectedStates, selectedCategory){
             .key(function(d) { return d.category_value;})
             .entries(statedata);
 
-        legendSpace = width/dataNest.length; // spacing for the legend
+        
 
         dataNest.forEach(function(d)  {  //{ console.log(d);
             //svg=document.getElementById(currentState);
@@ -333,34 +347,35 @@ function updateLines(selectedStates, selectedCategory){
                     return d.color = color(d.key); })
                 .attr("d", valueline(d.values))
                 .attr("id","current_factor");
+                legendSpace = width/dataNest.length; // spacing for the legend
 
-            //filter the category values for the legend
-            let array_of_categories_for_state = statedata.filter(function(d) {return d.locationdesc === currentState;})
+                //filter the category values for the legend
+                let array_of_categories_for_state = statedata.filter(function(d) {return d.locationdesc === currentState;})
                 .map(function(d) { return d.category_value});
-
+       
             //Make a unique list of the category values to remove repeated values
             let unique_category_set = new Set(array_of_categories_for_state);
             let unique_category_array = [...unique_category_set]
-
+       
             //Add in the legend data with category values
-            var legend = svg.selectAll("g.legend")
-                .data(unique_category_array)
-                .enter()
-                .append("g")
-                .attr("class", "legend")
-                .attr("id","current_legend");
-
+            var legend = d3.select("#"+ currentState).select("g").selectAll("g.legend")
+                   .data(unique_category_array)
+                   .enter()
+                   .append("g")
+                   .attr("class", "legend")
+                   .attr("id","current_legend");
+           
             legend.append("text")
                 .attr("x", width + margin.right - 50 - 8)
                 .attr("y", function (d, i) {return (i * 20) + 9;})
                 .data(unique_category_array)
                 .text(function (d) {return d});
-
+       
             // Add a box with matching color to the lines for the legend
             var dataRect = d3.nest()
                 .key(function(d) {return d.category_value;})
                 .entries(unique_category_array);
-
+       
             dataRect.forEach(function(d) {
                 //  console.log(d);
                 legend.append("rect")
@@ -369,7 +384,8 @@ function updateLines(selectedStates, selectedCategory){
                     .attr("width", 10)
                     .attr("height", 10)
                     .style("fill", function (d) {return color(d) ; })
-            })
+            });
+           
         });
 
         // Define the div for the tooltip

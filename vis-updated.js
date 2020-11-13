@@ -68,10 +68,17 @@ function renderMap(data, svg_id, val_range, rate_type) {
         .attr("class", "d3-tip")
         .offset([-8, 0])
         .html(function (d) {
+            if (getrate(stats, d.properties.name, rate_type) === undefined) {
+                let html = "<table>"
+                + "<tr>State Name: </td>" + d.properties.name +"</td></tr>"
+                + "<tr><th>Total Offenses:</th><td>" + "No data avaiable" +"</td></tr>"
+            return html
+            } else{
             let html = "<table>"
                 + "<tr>State Name: </td>" + d.properties.name +"</td></tr>"
                 + "<tr><th>Total Offenses:</th><td>" + getrate(stats, d.properties.name, rate_type);  +"</td></tr>"
             return html
+            }
         });
     svg.call(tool_tip)
 

@@ -95,7 +95,8 @@ function renderMap(data, svg_id, val_range, rate_type) {
  */
 function selected(d) {
     //set initial category to Age Group
-    var selectedCategory = "Age Group"
+    var selectedCategory = d3.select('input[name="btn"]:checked').property("value");
+    //selectedCategory = "Age Group";
 
     if (!selectedStates.includes(d.properties.name)) {
         d3.select(this).classed("selected", true).raise();
@@ -125,11 +126,9 @@ function updateGraphs(selectedStates, selectedCategory){
 
     //Set current state to the last state contained in the selectedStates array
     currentState = selectedStates[selectedStates.length - 1];
-
+    
     //Filter statesformap.csv data set to the selected category and the current state
     statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
-    //console.log ("state data for selected states: ")
-    //console.log(statedata)
 
     var margin_x = 20;
     var margin_y = 20;
@@ -212,7 +211,7 @@ function updateGraphs(selectedStates, selectedCategory){
 
     // Loop through each key
     dataNest.forEach(function(d) {
-        //  console.log(d);
+        console.log(d.key);
         svg.append("path")
             .attr("class", "line")
             .style("stroke", function() {return d.color = color(d.key)})
@@ -286,7 +285,7 @@ function updateGraphs(selectedStates, selectedCategory){
                 .duration(200)
                 .style("opacity", 0.9);
             div
-                .html(d.year + "<br/>" + d.avg_data_value)
+                .html(d.year + "<br/>" + d.avg_data_value + " cases/10 million")
                 .style("left", d3.event.pageX + "px")
                 .style("top", d3.event.pageY - 28 + "px");
         })
@@ -300,12 +299,8 @@ function updateGraphs(selectedStates, selectedCategory){
     d3.select("#lineChart-radioInputs").style("display", "block");
 
     d3.selectAll(("input[name='btn']")).on("change", function() {
-        //d3.selectAll("#current_factor").remove();
-        //d3.selectAll("#current_dots").remove();
         selectedCategory = this.value
         updateLines(selectedStates, selectedCategory)
-        //console.log("selectedCategory = " + selectedCategory)
-        //console.log("selectedStates = " +selectedStates);
     });
 
 
@@ -320,7 +315,6 @@ function updateLines(selectedStates, selectedCategory){
 
         currentState = selectedStates[j];
         //console.log(currentState);
-
         statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState;});
 
         var valueline = d3.line()
@@ -419,7 +413,7 @@ function updateLines(selectedStates, selectedCategory){
                     .duration(200)
                     .style("opacity", 0.9);
                 div
-                    .html(d.year + "<br/>" + d.avg_data_value)
+                    .html(d.year + "<br/>" + d.avg_data_value + " cases/10 million")
                     .style("left", d3.event.pageX + "px")
                     .style("top", d3.event.pageY - 28 + "px");
             })

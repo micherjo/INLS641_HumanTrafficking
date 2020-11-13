@@ -212,7 +212,7 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("text-anchor", "middle")
         .text("No data reported for this category");
     }
-    
+
     // Define a d3 line called valueline based on avg_data_values
     var valueline = d3.line()
         .x(function(d) { return x(d.year); })
@@ -329,6 +329,7 @@ function updateLines(selectedStates, selectedCategory){
     d3.selectAll("#current_factor").remove();
     d3.selectAll("#current_dots").remove();
     d3.selectAll("#current_legend").remove();
+    d3.selectAll(".no-data").remove();
 
     let j = 0;
     while (j< selectedStates.length) {
@@ -336,6 +337,16 @@ function updateLines(selectedStates, selectedCategory){
         currentState = selectedStates[j];
         //console.log(currentState);
         statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState;});
+
+
+        if (statedata.length == 0){
+            g.append("text")
+            .attr("class", "no-data")
+            .attr("x", 320 / 2)
+            .attr("dy", "5em")
+            .attr("text-anchor", "middle")
+            .text("No data reported for this category");
+    }
 
         var valueline = d3.line()
             .x(function(d) {return x(d.year); })

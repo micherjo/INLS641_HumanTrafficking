@@ -136,7 +136,8 @@ function updateGraphs(selectedStates, selectedCategory){
     
     //Filter statesformap.csv data set to the selected category and the current state
     statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
-
+    console.log(statedata);
+    
     var margin_x = 20;
     var margin_y = 20;
 
@@ -201,6 +202,16 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("x", 175)
         .style("text-anchor", "middle")
         .text("Year");
+
+    //display message if there is no data
+    if (statedata.length == 0){
+        g.append("text")
+        .attr("class", "no-data")
+        .attr("x", 320 / 2)
+        .attr("dy", "5em")
+        .attr("text-anchor", "middle")
+        .text("No data reported for this category");
+    }
     
     // Define a d3 line called valueline based on avg_data_values
     var valueline = d3.line()

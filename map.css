@@ -105,3 +105,9 @@ div.tooltip {
 .axis-label {
     font-size: 12px;
 }
+
+.no-data{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    fill: rgb(165, 178, 190);
+}

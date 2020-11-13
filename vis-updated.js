@@ -95,8 +95,8 @@ function renderMap(data, svg_id, val_range, rate_type) {
  */
 function selected(d) {
     //set initial category to Age Group
-    var selectedCategory = d3.select('input[name="btn"]:checked').property("value");
-    //selectedCategory = "Age Group";
+    //var selectedCategory = d3.select('input[name="btn"]:checked').property("value");
+    selectedCategory = "Age Group";
 
     if (!selectedStates.includes(d.properties.name)) {
         d3.select(this).classed("selected", true).raise();

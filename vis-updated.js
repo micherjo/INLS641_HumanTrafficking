@@ -94,7 +94,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
  * @param data
  */
 function selected(d) {
-    //set initial category to Age Group
+    //set category
     var selectedCategory = d3.select('input[name="btn"]:checked').property("value");
     //selectedCategory = "Age Group";
 
@@ -205,6 +205,11 @@ function updateGraphs(selectedStates, selectedCategory){
     var dataNest = d3.nest()
         .key(function(d) {return d.category_value;})
         .entries(statedata);
+
+    // set the colour scale
+    if(selectedCategory = "Age Group") {
+        var color = d3.scaleOrdinal(d3.schemeCategory10);
+    }
 
     // Loop through each key
     dataNest.forEach(function(d) {

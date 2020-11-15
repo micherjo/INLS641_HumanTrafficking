@@ -89,7 +89,7 @@ As we began analyzing the FBI data through our visualization prototype and resea
 
 In terms of the actual prototype development process, our biggest takeaway was probably the importance of data wrangling in preparation for building a prototype. We spent significant time reshaping our data from the multiple separate FBI spreadsheets released by year. Before the data was properly consolidated and organized, we had difficulties thinking of how we could incorporate the data into our code and how we should organize the code to fit the data. However, once we looked at similar examples and determined how the data should be structured, adding it into our visualization was not a problem anymore. Also, we found that defining the tasks and planning ahead was important as we determined how we want the visualization to look. At the same time, however, we felt that the visuzalization could be used to better understand the data and the story that it tells, which could in turn influence the visualization and tasks.
 
-#Ethical and Societal Considerations
+# Ethical and Societal Considerations
 
 ----------------------------------------------------------------------------------------------------------------------
 # INFO ON EDITING

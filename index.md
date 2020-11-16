@@ -91,6 +91,16 @@ In terms of the actual prototype development process, our biggest takeaway was p
 
 # Ethical and Societal Considerations
 
+- Advise people on how to read the chart
+- Consider that not everything is reported
+- Biases in the data reported 
+- Bias in categories - gender only m/f, race is limited
+- Snapshot of where we are
+- Look at lessons learned text
+
+
+# 
+
 ----------------------------------------------------------------------------------------------------------------------
 # INFO ON EDITING
 

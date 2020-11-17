@@ -279,12 +279,25 @@ function updateGraphs(selectedStates, selectedCategory){
 
     });
 
+    // Define tool tip table for charts
+    let tool_tip_chart = d3.tip()
+        .attr("class", "d3-tip")
+        .offset([-8, 0])
+        .html(function (d) {
+                let html = "<table>"
+                    + "<tr>Year : </td>" + d.year +"</td></tr>"
+                    + "<tr><th> "+d.category_value+"</th><td>"+": " +d.avg_data_value+ " cases/10 M" +"</td></tr>"
+                return html
+            });
+    svg.call(tool_tip_chart)
+
     // Define the div for the tooltip
     const div = d3
         .select("body")
         .append("div")
         .attr("class", "tooltip")
         .style("opacity", 0);
+
 
     // Add dots to the line chart
     svg
@@ -299,22 +312,8 @@ function updateGraphs(selectedStates, selectedCategory){
         .attr("stroke", "rgba(0,0,0,0)")
         .style("cursor", "pointer")
         .attr("id","current_dots")
-        .on("mouseover", d => {
-            div
-                .transition()
-                .duration(200)
-                .style("opacity", 0.9);
-            div
-                .html(d.year + "<br/>" + d.avg_data_value + " cases/10 million")
-                .style("left", d3.event.pageX + "px")
-                .style("top", d3.event.pageY - 28 + "px");
-        })
-        .on("mouseout", () => {
-            div
-                .transition()
-                .duration(500)
-                .style("opacity", 0);
-        });
+        .on("mouseover", tool_tip_chart.show)
+        .on("mouseout", tool_tip_chart.hide);
 
     d3.select("#lineChart-radioInputs").style("display", "block");
 
@@ -417,6 +416,18 @@ function updateLines(selectedStates, selectedCategory){
            
         });
 
+        // Define tool tip table for charts
+        let tool_tip_chart = d3.tip()
+            .attr("class", "d3-tip")
+            .offset([-8, 0])
+            .html(function (d) {
+                let html = "<table>"
+                    + "<tr>Year : </td>" + d.year +"</td></tr>"
+                    + "<tr><th> "+d.category_value+"</th><td>"+": " +d.avg_data_value+ " cases/10 M" +"</td></tr>"
+                return html
+            });
+        svg.call(tool_tip_chart)
+
         // Define the div for the tooltip
         const div = d3
             .select("body")
@@ -441,22 +452,8 @@ function updateLines(selectedStates, selectedCategory){
             .attr("stroke", "rgba(0,0,0,0)")
             .style("cursor", "pointer")
             .attr("id","current_dots")
-            .on("mouseover", d => {
-                div
-                    .transition()
-                    .duration(200)
-                    .style("opacity", 0.9);
-                div
-                    .html(d.year + "<br/>" + d.avg_data_value + " cases/10 million")
-                    .style("left", d3.event.pageX + "px")
-                    .style("top", d3.event.pageY - 28 + "px");
-            })
-            .on("mouseout", () => {
-                div
-                    .transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            });
+            .on("mouseover", tool_tip_chart.show)
+            .on("mouseout", tool_tip_chart.hide);
         j++;
     }
 }

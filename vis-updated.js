@@ -281,7 +281,7 @@ function updateGraphs(selectedStates, selectedCategory){
 
     // Define tool tip table for charts
     let tool_tip_chart = d3.tip()
-        .attr("class", "d3-tip")
+        .attr("class", "chart-tip")
         .offset([-8, 0])
         .html(function (d) {
                 let html = "<table>"
@@ -418,7 +418,7 @@ function updateLines(selectedStates, selectedCategory){
 
         // Define tool tip table for charts
         let tool_tip_chart = d3.tip()
-            .attr("class", "d3-tip")
+            .attr("class", "chart-tip")
             .offset([-8, 0])
             .html(function (d) {
                 let html = "<table>"

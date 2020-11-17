@@ -5,8 +5,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Update state removal selection">
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Updated chart tool tip, made into table to include category values">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +98,7 @@
       <workItem from="1604368124631" duration="1893000" />
       <workItem from="1604461781001" duration="4900000" />
       <workItem from="1604714136479" duration="5090000" />
-      <workItem from="1605625027826" duration="5053000" />
+      <workItem from="1605625027826" duration="6240000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -176,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604707527071</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updated chart tool tip, made into table to include category values">
+      <created>1605636098228</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605636098228</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +235,8 @@
     <MESSAGE value="Font updates and fixed the selection issue by removing the most recently selected state" />
     <MESSAGE value="Update to removal selection" />
     <MESSAGE value="Update state removal selection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update state removal selection" />
+    <MESSAGE value="Updated chart tool tip, made into table to include category values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated chart tool tip, made into table to include category values" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#Plugins" timestamp="1603924890272">
@@ -312,11 +321,12 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2381" y="224" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603978825081" />
-    <state x="350" y="125" key="Vcs.Push.Dialog.v2" timestamp="1604707528587">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1605636103459">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808405722" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-144.1920.1040@0.0.1280.680" timestamp="1603919600173" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605636103459" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
     <state x="1571" y="97" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.0.1600.900@1280.0.1600.900" timestamp="1604703707765" />
     <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604707528587" />

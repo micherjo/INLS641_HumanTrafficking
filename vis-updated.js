@@ -180,8 +180,7 @@ console.log(selectedStates.length);
         .attr("height", height + margin.top + margin.bottom)
         //what does this do?
         .append("g")
-        .attr("transform","translate(" + margin.left + "," + margin.top + ")");
-        
+        .attr("transform","translate(" + margin.left + "," + margin.top + ")");    
     if (selectedStates.length > 0) {
         svg.attr("id", currentState.replace(" ", "-"))
     }

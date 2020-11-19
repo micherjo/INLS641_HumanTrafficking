@@ -174,7 +174,7 @@ function updateGraphs(selectedStates, selectedCategory){
     //D3 Enter Selection: Add svg element of id #state-graphs  for each current state.
     var svg = d3.select("#state-graphs")
         .append("svg")
-        .attr("id", currentState)
+        .attr("id", currentState.replace(" ", "-"))
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         //what does this do?
@@ -267,7 +267,7 @@ function updateGraphs(selectedStates, selectedCategory){
             let unique_category_array = [...unique_category_set]
        
             //Add in the legend data with category values
-            var legend = d3.select("#"+ currentState).select("g").selectAll("g.legend")
+            var legend = d3.select("#"+ currentState.replace(" ", "-")).select("g").selectAll("g.legend")
                    .data(unique_category_array)
                    .enter()
                    .append("g")
@@ -356,7 +356,7 @@ function updateLines(selectedStates, selectedCategory){
 
         console.log(statedata.length);
     if (statedata.length == 0){
-        d3.select("#"+ currentState).select("g").select("g")
+        d3.select("#"+ currentState.replace(" ", "-")).select("g").select("g")
         .append("text")
         .attr("class", "no-data")
         .attr("x", 320 / 2)
@@ -376,7 +376,7 @@ function updateLines(selectedStates, selectedCategory){
         
 
         dataNest.forEach(function(d)  {  
-            d3.select("#"+ currentState)
+            d3.select("#"+ currentState.replace(" ", "-"))
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
                 .append("g")
@@ -400,7 +400,7 @@ function updateLines(selectedStates, selectedCategory){
             let unique_category_array = [...unique_category_set]
        
             //Add in the legend data with category values
-            var legend = d3.select("#"+ currentState).select("g").selectAll("g.legend")
+            var legend = d3.select("#"+ currentState.replace(" ", "-")).select("g").selectAll("g.legend")
                    .data(unique_category_array)
                    .enter()
                    .append("g")
@@ -449,7 +449,7 @@ function updateLines(selectedStates, selectedCategory){
             .style("opacity", 0);
 
         // Add the scatterplot
-        d3.select("#"+ currentState)
+        d3.select("#"+ currentState.replace(" ", "-"))
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")

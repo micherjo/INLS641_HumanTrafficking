@@ -74,7 +74,7 @@ h2 {
 div.tooltip {
     color: black;
     position: absolute;
-    text-align: center;
+    text-align: right;
     width: 130px;
     height: 32px;
     padding: 2px;
@@ -87,7 +87,20 @@ div.tooltip {
 
 .d3-tip {
     line-height: 1;
-    padding: 12px;
+    text-align: center;
+    position: absolute;
+    padding: 16px;
+    background: rgba(43,43,43, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+.chart-tip {
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    margin-left: 3em;
+    padding: 14px;
     background: rgba(43,43,43, 0.8);
     color: #fff;
     border-radius: 2px;

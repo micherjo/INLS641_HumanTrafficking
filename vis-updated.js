@@ -71,7 +71,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             if (getrate(stats, d.properties.name, rate_type) === undefined) {
                 let html = "<table>"
                 + "<tr>State Name: </td>" + d.properties.name +"</td></tr>"
-                + "<tr><th>Total Offenses:</th><td>" + "No data avaiable" +"</td></tr>"
+                + "<tr><th>Total Offenses:</th><td>" + "No data available" +"</td></tr>"
             return html
             } else{
             let html = "<table>"
@@ -136,7 +136,6 @@ function updateGraphs(selectedStates, selectedCategory){
     
     //Filter statesformap.csv data set to the selected category and the current state
     statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
-    console.log(statedata);
     
     var margin_x = 20;
     var margin_y = 20;
@@ -231,7 +230,6 @@ function updateGraphs(selectedStates, selectedCategory){
 
     // Loop through each key
     dataNest.forEach(function(d) {
-        console.log(d.key);
         svg.append("path")
             .attr("class", "line")
             .style("stroke", function() {return d.color = color(d.key)})
@@ -268,7 +266,6 @@ function updateGraphs(selectedStates, selectedCategory){
                 .entries(unique_category_array);
        
             dataRect.forEach(function(d) {
-                //  console.log(d);
                 legend.append("rect")
                     .attr("x", width + margin.right - 110 - 20)
                     .attr("y", function (d, i) {return i * 20;})
@@ -336,10 +333,7 @@ function updateLines(selectedStates, selectedCategory){
     while (j< selectedStates.length) {
 
         currentState = selectedStates[j];
-        //console.log(currentState);
         statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState;});
-
-        console.log(statedata);
 
     if (statedata.length == 0){
         d3.select("#"+ currentState).select("g")
@@ -361,8 +355,7 @@ function updateLines(selectedStates, selectedCategory){
 
         
 
-        dataNest.forEach(function(d)  {  //{ console.log(d);
-            //svg=document.getElementById(currentState);
+        dataNest.forEach(function(d)  {  
             d3.select("#"+ currentState)
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
@@ -406,7 +399,6 @@ function updateLines(selectedStates, selectedCategory){
                 .entries(unique_category_array);
        
             dataRect.forEach(function(d) {
-                //  console.log(d);
                 legend.append("rect")
                     .attr("x", width + margin.right - 110 - 20)
                     .attr("y", function (d, i) {return i * 20;})

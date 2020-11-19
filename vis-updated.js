@@ -135,7 +135,7 @@ function selected(d) {
     else {
         d3.select(this).classed("selected", false);
         var index = selectedStates.indexOf(d.properties.name);
-        var state_removed = d.properties.name
+        var state_removed = d.properties.name.replace(" ", "-")
         console.log(state_removed)
         d3.selectAll("#"+ state_removed).remove()
         //remove selected state from selectedStates array

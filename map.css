@@ -15,7 +15,7 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
 }
-#mapdiv {
+.states {
     width: 100%;
     height: 700px;
     fill: url(#hash);

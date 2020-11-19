@@ -63,6 +63,25 @@ function renderMap(data, svg_id, val_range, rate_type) {
     let svg = d3.select(svg_id);
     let colormap = d3.scaleSequentialLog().domain([1, 400]).interpolator(d3.interpolateYlGnBu);
 
+    var colorLegend = d3.legendColor()
+        .shapeWidth(30)
+        .orient('horizontal')
+        .scale(colormap)
+        .cells([0,30,90,270,1000])
+        .labels(['0','25','100','250','1000'])
+        .shapePadding(5)
+        .shapeWidth(50)
+        .shapeHeight(20)
+        .labelOffset(8);
+
+    svg.append("g")
+        .attr("class", "legendLinear")
+        .attr("transform", "translate(590, -10)");
+
+
+    svg.select(".legendLinear")
+        .call(colorLegend);
+
     // Define the tool tip to use for mouseovers.
     let tool_tip = d3.tip()
         .attr("class", "d3-tip")

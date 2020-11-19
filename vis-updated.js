@@ -135,7 +135,8 @@ function selected(d) {
     else {
         d3.select(this).classed("selected", false);
         var index = selectedStates.indexOf(d.properties.name);
-        var state_removed = d.properties.name.replace(" ", "-");
+        var state_removed = d.properties.name.replace(" ", "-")
+        console.log(state_removed)
         d3.selectAll("#"+ state_removed).remove()
         //remove selected state from selectedStates array
         selectedStates.splice(index, 1);
@@ -155,11 +156,10 @@ function updateGraphs(selectedStates, selectedCategory){
 
     //Set current state to the last state contained in the selectedStates array
     currentState = selectedStates[selectedStates.length - 1];
-    console.log(selectedStates);
-    
+
     //Filter statesformap.csv data set to the selected category and the current state
     statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
-    
+
     var margin_x = 20;
     var margin_y = 20;
 
@@ -172,18 +172,15 @@ function updateGraphs(selectedStates, selectedCategory){
     var y = d3.scaleLinear().range([height, 0]).domain([0, 400]);
 
     //D3 Enter Selection: Add svg element of id #state-graphs  for each current state.
-console.log(selectedStates.length);
-        console.log(currentState)
-        var svg = d3.select("#state-graphs")
+    var svg = d3.select("#state-graphs")
         .append("svg")
+        .attr("id", currentState.replace(" ", "-"))
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         //what does this do?
         .append("g")
-        .attr("transform","translate(" + margin.left + "," + margin.top + ")");    
-    if (selectedStates.length > 0) {
-        svg.attr("id", currentState.replace(" ", "-"))
-    }
+        .attr("transform","translate(" + margin.left + "," + margin.top + ")");
+
     //the exit selection
     d3.select("#state-graphs")
         .selectAll("svg")
@@ -220,7 +217,7 @@ console.log(selectedStates.length);
         .attr("x", -80)
         .style("text-anchor", "middle")
         .text("Number of Cases Per 10M People");
-    
+
     g.append("text")
         .attr("class", "axis-label")
         .attr("y", 200)
@@ -249,7 +246,7 @@ console.log(selectedStates.length);
         .key(function(d) {return d.category_value;})
         .entries(statedata);
 
-   
+
 
     // Loop through each key
     dataNest.forEach(function(d) {
@@ -264,11 +261,11 @@ console.log(selectedStates.length);
             //filter the category values for the legend
             let array_of_categories_for_state = statedata.filter(function(d) {return d.locationdesc === currentState;})
             .map(function(d) { return d.category_value});
-       
+
             //Make a unique list of the category values to remove repeated values
             let unique_category_set = new Set(array_of_categories_for_state);
             let unique_category_array = [...unique_category_set]
-       
+
             //Add in the legend data with category values
             var legend = d3.select("#"+ currentState.replace(" ", "-")).select("g").selectAll("g.legend")
                    .data(unique_category_array)
@@ -276,18 +273,18 @@ console.log(selectedStates.length);
                    .append("g")
                    .attr("class", "legend")
                    .attr("id","current_legend");
-           
+
             legend.append("text")
                 .attr("x", width + margin.right - 50 - 8)
                 .attr("y", function (d, i) {return (i * 20) + 9;})
                 .data(unique_category_array)
                 .text(function (d) {return d});
-       
+
             // Add a box with matching color to the lines for the legend
             var dataRect = d3.nest()
                 .key(function(d) {return d.category_value;})
                 .entries(unique_category_array);
-       
+
             dataRect.forEach(function(d) {
                 legend.append("rect")
                     .attr("x", width + margin.right - 110 - 20)
@@ -376,7 +373,7 @@ function updateLines(selectedStates, selectedCategory){
             .key(function(d) { return d.category_value;})
             .entries(statedata);
 
-        
+
 
         dataNest.forEach(function(d)  {  
             d3.select("#"+ currentState.replace(" ", "-"))
@@ -397,11 +394,11 @@ function updateLines(selectedStates, selectedCategory){
             //filter the category values for the legend
             let array_of_categories_for_state = statedata.filter(function(d) {return d.locationdesc === currentState;})
             .map(function(d) { return d.category_value});
-       
+
             //Make a unique list of the category values to remove repeated values
             let unique_category_set = new Set(array_of_categories_for_state);
             let unique_category_array = [...unique_category_set]
-       
+
             //Add in the legend data with category values
             var legend = d3.select("#"+ currentState.replace(" ", "-")).select("g").selectAll("g.legend")
                    .data(unique_category_array)
@@ -409,18 +406,18 @@ function updateLines(selectedStates, selectedCategory){
                    .append("g")
                    .attr("class", "legend")
                    .attr("id","current_legend");
-           
+
             legend.append("text")
                 .attr("x", width + margin.right - 50 - 8)
                 .attr("y", function (d, i) {return (i * 20) + 9;})
                 .data(unique_category_array)
                 .text(function (d) {return d});
-       
+
             // Add a box with matching color to the lines for the legend
             var dataRect = d3.nest()
                 .key(function(d) {return d.category_value;})
                 .entries(unique_category_array);
-       
+
             dataRect.forEach(function(d) {
                 legend.append("rect")
                     .attr("x", width + margin.right - 110 - 20)
@@ -429,7 +426,7 @@ function updateLines(selectedStates, selectedCategory){
                     .attr("height", 10)
                     .style("fill", function (d) {return color(d) ; })
             });
-           
+
         });
 
         // Define tool tip table for charts

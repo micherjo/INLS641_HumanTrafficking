@@ -172,6 +172,7 @@ function updateGraphs(selectedStates, selectedCategory){
     var y = d3.scaleLinear().range([height, 0]).domain([0, 400]);
 
     //D3 Enter Selection: Add svg element of id #state-graphs  for each current state.
+    if(selectedStates.length > 0){
     var svg = d3.select("#state-graphs")
         .append("svg")
         .attr("id", currentState.replace(" ", "-"))
@@ -180,7 +181,7 @@ function updateGraphs(selectedStates, selectedCategory){
         //what does this do?
         .append("g")
         .attr("transform","translate(" + margin.left + "," + margin.top + ")");
-
+    }
     //the exit selection
     d3.select("#state-graphs")
         .selectAll("svg")
@@ -188,7 +189,6 @@ function updateGraphs(selectedStates, selectedCategory){
         .exit()
         .remove();
 
-    //what does this do?
     let g = svg.append("g")
         .attr("transform", "translate("+margin_x+", "+margin_y+")");
 

@@ -148,6 +148,10 @@ function selected(d) {
  * Responsible for adding new svg elements to the page for each state selected.
  * @param selectedStates, selectedCategory
  */
+
+ // set the colour scale
+var color = d3.scaleOrdinal(d3.schemeCategory10);
+
 function updateGraphs(selectedStates, selectedCategory){
 
     //Set current state to the last state contained in the selectedStates array
@@ -242,10 +246,7 @@ function updateGraphs(selectedStates, selectedCategory){
         .key(function(d) {return d.category_value;})
         .entries(statedata);
 
-    // set the colour scale
-    if(selectedCategory = "Age Group") {
-        var color = d3.scaleOrdinal(d3.schemeCategory10);
-    }
+   
 
     // Loop through each key
     dataNest.forEach(function(d) {

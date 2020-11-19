@@ -135,8 +135,7 @@ function selected(d) {
     else {
         d3.select(this).classed("selected", false);
         var index = selectedStates.indexOf(d.properties.name);
-        var state_removed = d.properties.name.replace(" ", "-")
-        console.log(state_removed)
+        var state_removed = d.properties.name.replace(" ", "-");
         d3.selectAll("#"+ state_removed).remove()
         //remove selected state from selectedStates array
         selectedStates.splice(index, 1);
@@ -156,6 +155,7 @@ function updateGraphs(selectedStates, selectedCategory){
 
     //Set current state to the last state contained in the selectedStates array
     currentState = selectedStates[selectedStates.length - 1];
+    console.log(selectedStates);
     
     //Filter statesformap.csv data set to the selected category and the current state
     statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState ;},);
@@ -172,15 +172,19 @@ function updateGraphs(selectedStates, selectedCategory){
     var y = d3.scaleLinear().range([height, 0]).domain([0, 400]);
 
     //D3 Enter Selection: Add svg element of id #state-graphs  for each current state.
-    var svg = d3.select("#state-graphs")
+console.log(selectedStates.length);
+        console.log(currentState)
+        var svg = d3.select("#state-graphs")
         .append("svg")
-        .attr("id", currentState.replace(" ", "-"))
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         //what does this do?
         .append("g")
         .attr("transform","translate(" + margin.left + "," + margin.top + ")");
-
+        
+    if (selectedStates.length > 0) {
+        svg.attr("id", currentState.replace(" ", "-"))
+    }
     //the exit selection
     d3.select("#state-graphs")
         .selectAll("svg")

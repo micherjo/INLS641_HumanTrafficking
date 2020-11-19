@@ -76,7 +76,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
 
     svg.append("g")
         .attr("class", "legendLinear")
-        .attr("transform", "translate(590, -10)");
+        .attr("transform", "translate(590, -5)");
 
 
     svg.select(".legendLinear")

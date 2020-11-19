@@ -98,7 +98,7 @@ Another important and ethical consideration is the categories in which the data 
 
 The FBI’s Data Quality Guidelines did however explain why demographic details are collected in reporting:
 
-_The Hate Crimes Prevention Act amended that Hate  Crime Statistics Act by also requiring the collection of data about hate crimes motivated by actual or perceived “gender and gender identity” after “race,” “including data about crimes committed by, and crimes directed against, juveniles.” There are many kinds of bias, but the types of bias reported to the UCR Program are those mandated by the Act and its amendments, which currently include:  race, religion, disability, sexual orientation, ethnicity/national origin, and gender and gender identity._ ([ucr.fbi.gov])
+_The Hate Crimes Prevention Act amended that Hate  Crime Statistics Act by also requiring the collection of data about hate crimes motivated by actual or perceived “gender and gender identity” after “race,” “including data about crimes committed by, and crimes directed against, juveniles.” There are many kinds of bias, but the types of bias reported to the UCR Program are those mandated by the Act and its amendments, which currently include:  race, religion, disability, sexual orientation, ethnicity/national origin, and gender and gender identity._ (ucr.fbi.gov)
 
 We do hope that this visualization supports the goals that motivated the collection of this data, however, we strongly advise that users are aware of demographic bias as well as under-reported data during further research and while making assumptions and decisions that can help in lowering human trafficking. 
 

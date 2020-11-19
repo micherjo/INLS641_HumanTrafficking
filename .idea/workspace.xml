@@ -5,9 +5,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Updated chart tool tip, made into table to include category values">
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Had to fix the css for new chart tooltip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +97,9 @@
       <workItem from="1604368124631" duration="1893000" />
       <workItem from="1604461781001" duration="4900000" />
       <workItem from="1604714136479" duration="5090000" />
-      <workItem from="1605625027826" duration="6240000" />
+      <workItem from="1605625027826" duration="11020000" />
+      <workItem from="1605761069467" duration="893000" />
+      <workItem from="1605815662683" duration="1462000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -184,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605636098228</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Had to fix the css for new chart tooltip">
+      <created>1605637197560</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605637197560</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +244,8 @@
     <MESSAGE value="Update to removal selection" />
     <MESSAGE value="Update state removal selection" />
     <MESSAGE value="Updated chart tool tip, made into table to include category values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated chart tool tip, made into table to include category values" />
+    <MESSAGE value="Had to fix the css for new chart tooltip" />
+    <option name="LAST_COMMIT_MESSAGE" value="Had to fix the css for new chart tooltip" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#Plugins" timestamp="1603924890272">
@@ -312,6 +321,10 @@
       <screen x="0" y="23" width="1280" height="727" />
     </state>
     <state width="1259" height="226" key="GridCell.Tab.2.right/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604539911308" />
+    <state x="121" y="51" key="MergeDialog" timestamp="1605761081410">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="51" key="MergeDialog/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605761081410" />
     <state x="764" y="300" key="RollbackChangesDialog" timestamp="1603984388355">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -321,23 +334,24 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2381" y="224" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603978825081" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1605636103459">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1605637203850">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808405722" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-144.1920.1040@0.0.1280.680" timestamp="1603919600173" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605636103459" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605637203850" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
     <state x="1571" y="97" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.0.1600.900@1280.0.1600.900" timestamp="1604703707765" />
     <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604707528587" />
     <state x="2270" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1604343490085" />
     <state x="233" y="101" key="Vcs.Push.Dialog.v2/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604541980101" />
-    <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604714138110">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605815664973">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-790" y="-692" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603807768053" />
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808305583" />
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1487.-1080.1920.1040@0.0.1280.680" timestamp="1603660552586" />
+    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605815664973" />
     <state x="1853" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800/1280.0.1600.900@1280.0.1600.900" timestamp="1604703697934" />
     <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604714138110" />
     <state x="2607" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1604464974717" />

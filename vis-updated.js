@@ -1,5 +1,5 @@
 /* ========================================================================
- * INLS 690 - Human Trafficking FBI Data Visualization
+ * INLS 641 - Human Trafficking FBI Data Visualization
  * Laura Haller
  * Michelle Erin Johnson
  * Stacy MacDonald
@@ -338,7 +338,10 @@ function updateGraphs(selectedStates, selectedCategory){
         selectedCategory = this.value
         updateLines(selectedStates, selectedCategory)
     });
-
+/**
+ * Responsible for updated chart lines based on current radio button selection.
+ * @param selectedStates, selectedCategory
+ **/
 
 function updateLines(selectedStates, selectedCategory){
 

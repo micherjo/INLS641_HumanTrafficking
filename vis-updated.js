@@ -354,8 +354,9 @@ function updateLines(selectedStates, selectedCategory){
         currentState = selectedStates[j];
         statedata = data[2].filter(function(d) {return d.category == selectedCategory && d.locationdesc == currentState;});
 
+        console.log(statedata.length);
     if (statedata.length == 0){
-        d3.select("#"+ currentState).select("g")
+        d3.select("#"+ currentState).select("g").select("g")
         .append("text")
         .attr("class", "no-data")
         .attr("x", 320 / 2)

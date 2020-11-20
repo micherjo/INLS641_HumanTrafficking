@@ -36,22 +36,22 @@ function ready(data) {
 
 /**
  * Responsible for extracting overall number of cases for the requested state
- * @param us-states dataset, state_name, Cases_per10M
+ * @param us-states dataset, stateName, Cases_per10M
  * @return overall number of cases by state
  */
-function getrate(stats, state_name, rate_type) {
+function getRate(stats, stateName, rateType) {
     for (var i = 0; i < stats.length; i++) {
-        if (stats[i].State === state_name) {
-            return stats[i][rate_type];
+        if (stats[i].State === stateName) {
+            return stats[i][rateType];
         }
     }
 }
 
 /**
- * Responsible for rendering a map within the DOM element specified by svg_id.
- * @param state_data, svg_id, range of values, Cases_per10M
+ * Responsible for rendering a map within the DOM element specified by svgID.
+ * @param state_data, svgID, range of values, Cases_per10M
  */
-function renderMap(data, svg_id, val_range, rate_type) {
+function renderMap(data, svgID, valueRange, rateType) {
     let us = data[0];
     let stats = data[1];
     let projection = d3.geoAlbersUsa()
@@ -60,13 +60,13 @@ function renderMap(data, svg_id, val_range, rate_type) {
 
     // Define path generator
     let path = d3.geoPath().projection(projection);
-    let svg = d3.select(svg_id);
-    let colormap = d3.scaleSequentialLog().domain([1, 400]).interpolator(d3.interpolateYlGnBu);
+    let svg = d3.select(svgID);
+    let colorMap = d3.scaleSequentialLog().domain([1, 400]).interpolator(d3.interpolateYlGnBu);
 
     var colorLegend = d3.legendColor()
         .shapeWidth(30)
         .orient('horizontal')
-        .scale(colormap)
+        .scale(colorMap)
         .cells([0, 5, 25, 125, 600])
         .labels(['0', '5', '25', '125', '600'])
         .shapePadding(5)
@@ -83,23 +83,24 @@ function renderMap(data, svg_id, val_range, rate_type) {
         .call(colorLegend);
 
     // Define the tool tip to use for mouseovers.
-    let tool_tip = d3.tip()
+    let toolTip = d3.tip()
         .attr("class", "d3-tip")
         .offset([-8, 0])
         .html(function(d) {
-            if (getrate(stats, d.properties.name, rate_type) === undefined) {
-                let html = "<table>" +
+            if (getRate(stats, d.properties.name, rateType) === undefined) {
+                let tooltipTable = "<table>" +
                     "<tr>State Name: </td>" + d.properties.name + "</td></tr>" +
                     "<tr><th>Total Offenses: </th><td>" + "No data available" + "</td></tr>"
-                return html
+                return tooltipTable
             } else {
-                let html = "<table>" +
+                let tooltipTable = "<table>" +
                     "<tr>State Name: </td>" + d.properties.name + "</td></tr>" +
-                    "<tr><th>Total Offenses: </th><td>" + getrate(stats, d.properties.name, rate_type); + "</td></tr>"
-                return html
+                    "<tr><th>Total Offenses: </th><td>" + getRate(stats, d.properties.name, rateType); + "</td></tr>"
+                return tooltipTable
             }
         });
-    svg.call(tool_tip)
+
+    svg.call(toolTip)
 
     //Append svg elements for each state ("g") to the map
     svg.append("g")
@@ -108,13 +109,13 @@ function renderMap(data, svg_id, val_range, rate_type) {
         .data(us.features)
         .enter().append("path")
         .attr("fill", function(d) {
-            let rate = getrate(stats, d.properties.name, rate_type);
-            return colormap(rate);
+            let rate = getRate(stats, d.properties.name, rateType);
+            return colorMap(rate);
         })
         .attr("d", path)
         .on("click", selected)
-        .on("mouseover", tool_tip.show)
-        .on("mouseout", tool_tip.hide)
+        .on("mouseover", toolTip.show)
+        .on("mouseout", toolTip.hide)
 
 
     /**
@@ -138,9 +139,9 @@ function renderMap(data, svg_id, val_range, rate_type) {
         else {
             d3.select(this).classed("selected", false);
             var index = selectedStates.indexOf(d.properties.name);
-            var state_removed = d.properties.name.replace(" ", "-")
-            console.log(state_removed)
-            d3.selectAll("#" + state_removed).remove()
+            var stateRemoved = d.properties.name.replace(" ", "-")
+            console.log(stateRemoved)
+            d3.selectAll("#" + stateRemoved).remove()
             //remove selected state from selectedStates array
             selectedStates.splice(index, 1);
             updateGraphs(selectedStates, selectedCategory);
@@ -161,12 +162,12 @@ function renderMap(data, svg_id, val_range, rate_type) {
         currentState = selectedStates[selectedStates.length - 1];
 
         //Filter statesformap.csv data set to the selected category and the current state
-        statedata = data[2].filter(function(d) {
+        stateData = data[2].filter(function(d) {
             return d.category == selectedCategory && d.locationdesc == currentState;
         }, );
 
-        var margin_x = 20;
-        var margin_y = 20;
+        var marginX = 20;
+        var marginY = 20;
 
         var margin = {
                 top: 30,
@@ -200,7 +201,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .remove();
 
         let g = svg.append("g")
-            .attr("transform", "translate(" + margin_x + ", " + margin_y + ")");
+            .attr("transform", "translate(" + marginX + ", " + marginY + ")");
 
         // Add the Y Axis
         svg.append("g")
@@ -236,7 +237,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .text("Year");
 
         //display message if there is no data
-        if (statedata.length == 0) {
+        if (stateData.length == 0) {
             g.append("text")
                 .attr("class", "no-data")
                 .attr("x", 320 / 2)
@@ -245,8 +246,8 @@ function renderMap(data, svg_id, val_range, rate_type) {
                 .text("No data reported for this category");
         }
 
-        // Define a d3 line called valueline based on avg_data_values
-        var valueline = d3.line()
+        // Define a d3 line called valueLine based on avg_data_values
+        var valueLine = d3.line()
             .x(function(d) {
                 return x(d.year);
             })
@@ -260,7 +261,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .key(function(d) {
                 return d.category_value;
             })
-            .entries(statedata);
+            .entries(stateData);
 
 
         // Loop through each key
@@ -270,13 +271,13 @@ function renderMap(data, svg_id, val_range, rate_type) {
                 .style("stroke", function() {
                     return d.color = color(d.key)
                 })
-                .attr("d", valueline(d.values))
-                .attr("id", "current_factor");
+                .attr("d", valueLine(d.values))
+                .attr("id", "currentFactor");
 
             legendSpace = width / dataNest.length; // spacing for the legend
 
             //filter the category values for the legend
-            let array_of_categories_for_state = statedata.filter(function(d) {
+            let arrayStateCategories = stateData.filter(function(d) {
                 return d.locationdesc === currentState;
             })
                 .map(function(d) {
@@ -284,23 +285,23 @@ function renderMap(data, svg_id, val_range, rate_type) {
                 });
 
             //Make a unique list of the category values to remove repeated values
-            let unique_category_set = new Set(array_of_categories_for_state);
-            let unique_category_array = [...unique_category_set]
+            let uniqueCategorySet = new Set(arrayStateCategories);
+            let uniqueCategoryArray = [...uniqueCategorySet]
 
             //Add in the legend data with category values
             var legend = d3.select("#" + currentState.replace(" ", "-")).select("g").selectAll("g.legend")
-                .data(unique_category_array)
+                .data(uniqueCategoryArray)
                 .enter()
                 .append("g")
                 .attr("class", "legend")
-                .attr("id", "current_legend");
+                .attr("id", "currentLegend");
 
             legend.append("text")
                 .attr("x", width + margin.right - 50 - 8)
                 .attr("y", function(d, i) {
                     return (i * 20) + 9;
                 })
-                .data(unique_category_array)
+                .data(uniqueCategoryArray)
                 .text(function(d) {
                     return d
                 });
@@ -310,7 +311,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
                 .key(function(d) {
                     return d.category_value;
                 })
-                .entries(unique_category_array);
+                .entries(uniqueCategoryArray);
 
             dataRect.forEach(function(d) {
                 legend.append("rect")
@@ -328,16 +329,16 @@ function renderMap(data, svg_id, val_range, rate_type) {
         });
 
         // Define tool tip table for charts
-        let tool_tip_chart = d3.tip()
+        let tooltipChart = d3.tip()
             .attr("class", "chart-tip")
             .offset([-8, 0])
             .html(function(d) {
-                let html = "<table>" +
-                    "<tr>Year : </td>" + d.year + "</td></tr>" +
+                let tooltipTable = "<table>" +
+                    "<tr>Year: </td>" + d.year + "</td></tr>" +
                     "<tr><th> " + d.category_value + "</th><td>" + ": " + d.avg_data_value + " cases per 10M" + "</td></tr>"
-                return html
+                return tooltipTable
             });
-        svg.call(tool_tip_chart)
+        svg.call(tooltipChart)
 
         // Define the div for the tooltip
         const div = d3
@@ -350,7 +351,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
         // Add dots to the line chart
         svg
             .selectAll("dot")
-            .data(statedata)
+            .data(stateData)
             .enter()
             .append("circle")
             .attr("r", 3)
@@ -359,9 +360,9 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .attr("stroke-width", "20px")
             .attr("stroke", "rgba(0,0,0,0)")
             .style("cursor", "pointer")
-            .attr("id", "current_dots")
-            .on("mouseover", tool_tip_chart.show)
-            .on("mouseout", tool_tip_chart.hide);
+            .attr("id", "currentDots")
+            .on("mouseover", tooltipChart.show)
+            .on("mouseout", tooltipChart.hide);
 
         d3.select("#lineChart-radioInputs").style("display", "block");
 
@@ -376,9 +377,9 @@ function renderMap(data, svg_id, val_range, rate_type) {
 
         function updateLines(selectedStates, selectedCategory) {
 
-            d3.selectAll("#current_factor").remove();
-            d3.selectAll("#current_dots").remove();
-            d3.selectAll("#current_legend").remove();
+            d3.selectAll("#currentFactor").remove();
+            d3.selectAll("#currentDots").remove();
+            d3.selectAll("#currentLegend").remove();
             d3.selectAll(".no-data").remove();
 
 
@@ -386,12 +387,12 @@ function renderMap(data, svg_id, val_range, rate_type) {
             while (j < selectedStates.length) {
 
                 currentState = selectedStates[j];
-                statedata = data[2].filter(function(d) {
+                stateData = data[2].filter(function(d) {
                     return d.category == selectedCategory && d.locationdesc == currentState;
                 });
 
-                console.log(statedata.length);
-                if (statedata.length == 0) {
+                console.log(stateData.length);
+                if (stateData.length == 0) {
                     d3.select("#" + currentState.replace(" ", "-")).select("g").select("g")
                         .append("text")
                         .attr("class", "no-data")
@@ -401,7 +402,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
                         .text("No data reported for this category");
                 }
 
-                var valueline = d3.line()
+                var valueLine = d3.line()
                     .x(function(d) {
                         return x(d.year);
                     })
@@ -413,7 +414,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
                     .key(function(d) {
                         return d.category_value;
                     })
-                    .entries(statedata);
+                    .entries(stateData);
 
 
 
@@ -428,14 +429,14 @@ function renderMap(data, svg_id, val_range, rate_type) {
                         .style("stroke", function() { // Add the colours dynamically
                             return d.color = color(d.key);
                         })
-                        .attr("d", valueline(d.values))
-                        .attr("id", "current_factor");
+                        .attr("d", valueLine(d.values))
+                        .attr("id", "currentFactor");
 
 
                     legendSpace = width / dataNest.length; // spacing for the legend
 
                     //filter the category values for the legend
-                    let array_of_categories_for_state = statedata.filter(function(d) {
+                    let arrayStateCategories = stateData.filter(function(d) {
                         return d.locationdesc === currentState;
                     })
                         .map(function(d) {
@@ -443,23 +444,23 @@ function renderMap(data, svg_id, val_range, rate_type) {
                         });
 
                     //Make a unique list of the category values to remove repeated values
-                    let unique_category_set = new Set(array_of_categories_for_state);
-                    let unique_category_array = [...unique_category_set]
+                    let uniqueCategorySet = new Set(arrayStateCategories);
+                    let uniqueCategoryArray = [...uniqueCategorySet]
 
                     //Add in the legend data with category values
                     var legend = d3.select("#" + currentState.replace(" ", "-")).select("g").selectAll("g.legend")
-                        .data(unique_category_array)
+                        .data(uniqueCategoryArray)
                         .enter()
                         .append("g")
                         .attr("class", "legend")
-                        .attr("id", "current_legend");
+                        .attr("id", "currentLegend");
 
                     legend.append("text")
                         .attr("x", width + margin.right - 50 - 8)
                         .attr("y", function(d, i) {
                             return (i * 20) + 9;
                         })
-                        .data(unique_category_array)
+                        .data(uniqueCategoryArray)
                         .text(function(d) {
                             return d
                         });
@@ -469,7 +470,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
                         .key(function(d) {
                             return d.category_value;
                         })
-                        .entries(unique_category_array);
+                        .entries(uniqueCategoryArray);
 
                     dataRect.forEach(function(d) {
                         legend.append("rect")
@@ -487,16 +488,16 @@ function renderMap(data, svg_id, val_range, rate_type) {
                 });
 
                 // Define tool tip table for charts
-                let tool_tip_chart = d3.tip()
+                let tooltipChart = d3.tip()
                     .attr("class", "chart-tip")
                     .offset([-8, 0])
                     .html(function(d) {
-                        let html = "<table>" +
+                        let tooltipTable = "<table>" +
                             "<tr>Year : </td>" + d.year + "</td></tr>" +
                             "<tr><th> " + d.category_value + "</th><td>" + ": " + d.avg_data_value + " cases per 10M" + "</td></tr>"
-                        return html
+                        return tooltipTable
                     });
-                svg.call(tool_tip_chart)
+                svg.call(tooltipChart)
 
                 // Define the div for the tooltip
                 const div = d3
@@ -512,7 +513,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
                     .append("g")
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                     .selectAll("dot")
-                    .data(statedata)
+                    .data(stateData)
                     .enter()
                     .append("circle")
                     .attr("r", 3)
@@ -521,9 +522,9 @@ function renderMap(data, svg_id, val_range, rate_type) {
                     .attr("stroke-width", "20px")
                     .attr("stroke", "rgba(0,0,0,0)")
                     .style("cursor", "pointer")
-                    .attr("id", "current_dots")
-                    .on("mouseover", tool_tip_chart.show)
-                    .on("mouseout", tool_tip_chart.hide);
+                    .attr("id", "currentDots")
+                    .on("mouseover", tooltipChart.show)
+                    .on("mouseout", tooltipChart.hide);
                 j++;
             }
         }

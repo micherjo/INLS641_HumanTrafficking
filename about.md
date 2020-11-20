@@ -1,17 +1,16 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Human Trafficking in the US</title>
-    <script src="https://micherjo.github.io/INLS641_HumanTrafficking/libraries/d3.v5.js"></script>
-    <script src="https://micherjo.github.io/INLS641_HumanTrafficking/libraries/d3.v5.min.js"></script>
-    <script src="https://micherjo.github.io/INLS641_HumanTrafficking/topojson@3"></script>
-    <script src="https://micherjo.github.io/INLS641_HumanTrafficking/main.js"></script>
-   
- 
-    <script src="https://micherjo.github.io/INLS641_HumanTrafficking/libraries/d3-tip.min.js"></script>
-    <script src="https://micherjo.github.io/INLS641_HumanTrafficking/libraries/d3-legend.min.js"></script>
-    <script src="https://micherjo.github.io/INLS641_HumanTrafficking/libraries/d3-legend.js"></script>
-    <link rel="stylesheet" href="https://micherjo.github.io/INLS641_HumanTrafficking/map.css">
+    <script src="libraries/d3.v5.js"></script>
+    <script src="libraries/d3.v5.min.js"></script>
+    <script src="topojson.js"></script>
+    <script src="main.js"></script>
+    <script src="libraries/d3-tip.min.js"></script>
+    <script src="libraries/d3-legend.min.js"></script>
+    <script src="libraries/d3-legend.js"></script>
+    <link rel="stylesheet" href="map.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
@@ -53,8 +52,5 @@
     </div>
 </div>
 
-<h3>  Too small?  A larger version of this map can be viewed at <a href="https://opal.ils.unc.edu/~micherjo/inls641/Project/INLS641_HumanTrafficking/map.html">opal.sils.unc.edu</a></h3>
 </body>
-
-
-
+</html>

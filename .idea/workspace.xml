@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Had to fix the css for new chart tooltip">
+      <change afterPath="$PROJECT_DIR$/d3-array.v2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d3-legend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d3-legend.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d3-tip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d3.v5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/d3.v5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/topojson.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/line-chart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/line-chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/line-graph.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/line-graph.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,16 +40,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jKXDvki3tluKxniVJRfa6ApzxW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../project_COMET" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/USStateMap" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -100,6 +118,7 @@
       <workItem from="1605625027826" duration="11020000" />
       <workItem from="1605761069467" duration="893000" />
       <workItem from="1605815662683" duration="1462000" />
+      <workItem from="1605831813238" duration="1696000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -228,6 +247,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="LIMIT_HISTORY" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/HumanTrafficking_LineCharts" />
@@ -265,13 +285,13 @@
     </state>
     <state x="92" y="92" width="1736" height="976" key="DiffContextDialog/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604695361872" />
     <state x="2012" y="92" width="1736" height="976" key="DiffContextDialog/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603809038489" />
-    <state x="632" y="162" key="FileChooserDialogImpl" timestamp="1604718878492">
+    <state x="632" y="162" key="FileChooserDialogImpl" timestamp="1605832731320">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603812205112" />
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.-144.1920.1040@0.0.1280.680" timestamp="1603917265809" />
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603676837727" />
-    <state x="632" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604718878492" />
+    <state x="632" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605832731320" />
     <state x="2552" y="162" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603748445283" />
     <state width="1259" height="226" key="GridCell.Tab.0.bottom" timestamp="1604539911251">
       <screen x="0" y="23" width="1280" height="727" />
@@ -367,11 +387,11 @@
     </state>
     <state x="411" y="158" key="run.anything.popup/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605634508213" />
     <state x="616" y="270" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604696235135" />
-    <state x="415" y="183" width="670" height="425" key="search.everywhere.popup" timestamp="1604243318725">
-      <screen x="0" y="23" width="1280" height="727" />
+    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1605833503307">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="-854" y="-851" width="672" height="608" key="search.everywhere.popup/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603809247629" />
-    <state x="623" y="255" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1603982393341" />
+    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605833503307" />
     <state x="415" y="183" width="670" height="425" key="search.everywhere.popup/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604243318725" />
   </component>
 </project>

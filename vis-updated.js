@@ -14,9 +14,9 @@
  * @return Promise
  */
 Promise.all([
-    d3.json("us-states.json"),
-    d3.csv("statesformap.csv"),
-    d3.csv("human_trafficking.csv")
+    d3.json("data/us-states.json"),
+    d3.csv("data/statesformap.csv"),
+    d3.csv("data/human_trafficking.csv")
 ])
     .then(ready);
 
@@ -247,7 +247,6 @@ function updateGraphs(selectedStates, selectedCategory){
         .entries(statedata);
 
 
-
     // Loop through each key
     dataNest.forEach(function(d) {
         svg.append("path")
@@ -378,7 +377,7 @@ function updateLines(selectedStates, selectedCategory){
 
 
 
-        dataNest.forEach(function(d)  {  
+        dataNest.forEach(function(d)  {
             d3.select("#"+ currentState.replace(" ", "-"))
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)

@@ -178,14 +178,16 @@ function renderMap(data, svgID, valueRange, rateType) {
         // Set X and Y axis label positions
         var marginX = 20;
         var marginY = 20;
+
+        // Set margin for state divs
         var margin = {
-                top: 30,
+                top: 60,
                 right: 50,
                 bottom: 30,
                 left: 50
             },
             width = 480 - margin.left - margin.right,
-            height = 250 - margin.top - margin.bottom;
+            height = 290 - margin.top - margin.bottom;
 
         // Set X and Y axis ranges
         var x = d3.scaleLinear().range([0, width]).domain([2014, 2019]);
@@ -213,7 +215,7 @@ function renderMap(data, svgID, valueRange, rateType) {
         let g = svg.append("g")
             .attr("transform", "translate(" + marginX + ", " + marginY + ")");
 
-        //Transform and translate the X Axis, add tick marks
+        //Transform and translate the X Axis; add tick marks
         g.append("g")
             .attr("class", "axis")
             .attr("transform", "translate(-20," + (180) + ")")
@@ -226,17 +228,16 @@ function renderMap(data, svgID, valueRange, rateType) {
         // Add text label for the state name to the top-middle of the SVG
         g.append("text")
             .attr("class", "label")
-            .attr("x", 85)
-            .attr("y", 10)
-            .attr("dy", "-2em")
-            .attr("text-anchor", "middle")
+            .attr("x", 190)
+            .attr("y", -30)
+            .style("text-anchor", "middle")
             .text(currentState);
 
         // Add text label "Year" to X-axis
         g.append("text")
             .attr("class", "axis-label")
-            .attr("y", 200)
-            .attr("x", 175)
+            .attr("y", 205)
+            .attr("x", 170)
             .style("text-anchor", "middle")
             .text("Year");
 
@@ -253,10 +254,10 @@ function renderMap(data, svgID, valueRange, rateType) {
         if (stateData.length == 0) {
             g.append("text")
                 .attr("class", "no-data")
-                .attr("x", 320 / 2)
-                .attr("dy", "5em")
+                .attr("y", 55)
+                .attr("x", 170)
                 .attr("text-anchor", "middle")
-                .text("No data reported for this category");
+                .text("No data reported for this category.");
         }
 
         // Define a D3 line called valueLine based on avg_data_values

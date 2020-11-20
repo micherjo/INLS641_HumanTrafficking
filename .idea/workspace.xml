@@ -8,18 +8,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Added libraries directly into the repo; removed unnecessary files">
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Created directories, refactored files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d3-array.v2.js" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/d3-array.v2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d3-legend.js" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/d3-legend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d3-legend.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/d3-legend.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d3-tip.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/d3-tip.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d3.v5.js" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/d3.v5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d3.v5.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/d3.v5.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topojson.js" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/topojson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/us-states.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/us-states.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/vis-updated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/USStateMap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -76,13 +68,13 @@
     <configuration name="gender_line_chart.html" type="NodeJSConfigurationType" temporary="true" path-to-js-file="$PROJECT_DIR$/line-chart.js" working-dir="$PROJECT_DIR$/USStateMap/USStateMap">
       <method v="2" />
     </configuration>
-    <configuration name="vis-updated.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/vis-updated.js" working-dir="$PROJECT_DIR$">
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/main.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.map.html" />
-        <item itemvalue="Node.js.vis-updated.js" />
+        <item itemvalue="Node.js.main.js" />
         <item itemvalue="JavaScript Debug.gender_line_chart.html" />
         <item itemvalue="Node.js.gender_line_chart.html" />
         <item itemvalue="JavaScript Debug.graph_scratch.html" />
@@ -119,7 +111,8 @@
       <workItem from="1605625027826" duration="11020000" />
       <workItem from="1605761069467" duration="893000" />
       <workItem from="1605815662683" duration="1462000" />
-      <workItem from="1605831813238" duration="2421000" />
+      <workItem from="1605831813238" duration="4372000" />
+      <workItem from="1605836254391" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -219,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605833747350</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Created directories, refactored files">
+      <created>1605834411629</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1605834411629</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +274,8 @@
     <MESSAGE value="Updated chart tool tip, made into table to include category values" />
     <MESSAGE value="Had to fix the css for new chart tooltip" />
     <MESSAGE value="Added libraries directly into the repo; removed unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added libraries directly into the repo; removed unnecessary files" />
+    <MESSAGE value="Created directories, refactored files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created directories, refactored files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#Plugins" timestamp="1603924890272">
@@ -363,7 +364,7 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2381" y="224" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603978825081" />
-    <state x="350" y="125" key="Vcs.Push.Dialog.v2" timestamp="1605833753432">
+    <state x="350" y="125" key="Vcs.Push.Dialog.v2" timestamp="1605834413072">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808405722" />
@@ -371,7 +372,7 @@
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605637203850" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
     <state x="1571" y="97" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.0.1600.900@1280.0.1600.900" timestamp="1604703707765" />
-    <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605833753432" />
+    <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605834413072" />
     <state x="2270" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1604343490085" />
     <state x="233" y="101" key="Vcs.Push.Dialog.v2/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604541980101" />
     <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605833671042">
@@ -391,16 +392,16 @@
     <state x="0" y="0" width="857" height="600" key="dock-window-1/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603812063846" />
     <state x="0" y="0" width="1083" height="632" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1605625810908" />
     <state x="1373" y="23" width="1153" height="708" key="dock-window-1/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604331875477" />
-    <state x="411" y="158" key="run.anything.popup" timestamp="1605634508213">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="616" y="270" key="run.anything.popup" timestamp="1605835646215">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="411" y="158" key="run.anything.popup/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605634508213" />
-    <state x="616" y="270" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1604696235135" />
-    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1605834016044">
+    <state x="616" y="270" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605835646215" />
+    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1605835629433">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="-854" y="-851" width="672" height="608" key="search.everywhere.popup/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603809247629" />
-    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605834016044" />
+    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605835629433" />
     <state x="415" y="183" width="670" height="425" key="search.everywhere.popup/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604243318725" />
   </component>
 </project>

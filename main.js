@@ -315,7 +315,7 @@ function renderMap(data, svgID, valueRange, rateType) {
 
             dataRect.forEach(function(d) {
                 legend.append("rect")
-                    .attr("x", width + margin.right - 110 - 20)
+                    .attr("x", width + margin.right - 15 - 20)
                     .attr("y", function(d, i) {
                         return i * 20;
                     })
@@ -474,7 +474,7 @@ function renderMap(data, svgID, valueRange, rateType) {
 
                     dataRect.forEach(function(d) {
                         legend.append("rect")
-                            .attr("x", width + margin.right - 110 - 20)
+                            .attr("x", width + margin.right - 15 - 20)
                             .attr("y", function(d, i) {
                                 return i * 20;
                             })

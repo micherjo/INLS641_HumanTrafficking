@@ -63,6 +63,7 @@ div.tooltip {
     background: white;
     border: 2px solid black;
     pointer-events: none;
+    font-family: Open Sans, sans-serif;
 }
 
 .d3-tip {
@@ -73,6 +74,7 @@ div.tooltip {
     background: rgba(43,43,43, 0.8);
     color: #fff;
     border-radius: 2px;
+    font-family: Open Sans, sans-serif;
 }
 
 .chart-tip {
@@ -84,22 +86,23 @@ div.tooltip {
     background: rgba(43,43,43, 0.8);
     color: #fff;
     border-radius: 2px;
+    font-family: Open Sans, sans-serif;
 }
-
 .legend {
     position:absolute;
     font-weight: bold;
     text-anchor: end;
     font: 11px Open Sans;
-
 }
 .axis-label {
     font-size: 12px;
     font-weight: bold;
+    font-family: Open Sans, sans-serif;
 }
 .label {
     font-size: 20px;
     font-weight: bold;
+    font-family: Open Sans, sans-serif;
 }
 .no-data{
     font-family: 'Open Sans', sans-serif;

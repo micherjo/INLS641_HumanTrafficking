@@ -5,7 +5,7 @@
     <title>Human Trafficking in the US</title>
     <script src="libraries/d3.v5.js"></script>
     <script src="libraries/d3.v5.min.js"></script>
-    <script src="topojson.js"></script>
+    <script src="libraries/topojson.js"></script>
     <script src="main.js"></script>
     <script src="libraries/d3-tip.min.js"></script>
     <script src="libraries/d3-legend.min.js"></script>

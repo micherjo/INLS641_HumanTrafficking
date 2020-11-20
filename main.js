@@ -27,7 +27,6 @@ let selectedStates = [];
 
 /**
  * Specifies the renderMap function to run after the document is loaded
- * @param none
  * @return {boolean} Ready to render
  */
 function ready(data) {
@@ -38,7 +37,7 @@ function ready(data) {
 
 /**
  * Extracts overall number of cases for the requested state
- * @param {array} array of data from us-states.json
+ * @param {array} stats array of data from us-states.json
  * @param {string} stateName name of the state
  * @param {string} rateType Name of rate variable you want to return
  * @return {number} Overall number of cases by state
@@ -57,7 +56,7 @@ function getRate(stats, stateName, rateType) {
  * @param {array} data array of data from us-states.json
  * @param {string} svgID SVG to place the map
  * @param {array} valueRange  Array of range of values
- * @param (string) rateType Attribute used to render map shading (i.e. Cases per 10M)
+ * @param {string} rateType Attribute used to render map shading (i.e. Cases per 10M)
  */
 function renderMap(data, svgID, valueRange, rateType) {
     let us = data[0];

@@ -12,7 +12,7 @@ The ultimate goal of this project would be to create a visualization that could 
 We would like to dedicate a portion of our visualization to discussing what laws are in place in each US state. This way, policymakers could look at the numbers and see what clusters have in common when it comes to laws. This could more clearly illustrate what needs to be done to combat human trafficking from a legislative point of view. After all, policymakers are those who can affect the most real change when it comes to prevention of this crime. 
 
 ## Click below to view the visualization:
-[![alt text](https://micherjo.github.io/INLS641_HumanTrafficking/map.png "link to map")](https://micherjo.github.io/INLS641_HumanTrafficking/about)
+[![alt text](https://micherjo.github.io/INLS641_HumanTrafficking/img/map.png "link to map")](https://micherjo.github.io/INLS641_HumanTrafficking/about)
   
   
 # Motivation

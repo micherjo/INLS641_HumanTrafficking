@@ -1,11 +1,5 @@
-.states {
-    fill:"url(#hash)";
-}
 .states :hover {
     opacity: 50%;
-}
-.State-Comparisons{
-    font-family: Open Sans, sans-serif;
 }
 h1 {
     font-family: 'Roboto', sans-serif;
@@ -15,12 +9,11 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
 }
-#mapdiv {
+.states {
     width: 100%;
     height: 700px;
     fill: url(#hash);
     font-family: Open Sans, sans-serif;
-
 }
 #mapsvg_pr {
     margin-left:70px;
@@ -37,24 +30,11 @@ h2 {
     width: 1050px;
     margin-left: 100px;
     margin-top: 40px;
-
-}
-#state-comparison {
-    margin: 20px;
-    margin-left: 100px;
-    font-family: Open Sans, sans-serif;
 }
 #state-graphs {
     width: 1050px;
     margin-top: 50px;
     font-family: Open Sans, sans-serif;
-}
-.state-borders {
-    fill: none;
-    stroke-width: 0.5px;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-    pointer-events: none;
 }
 .selected {
     stroke: black;
@@ -74,9 +54,9 @@ h2 {
 div.tooltip {
     color: black;
     position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 28px;
+    text-align: right;
+    width: 130px;
+    height: 32px;
     padding: 2px;
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
@@ -87,18 +67,38 @@ div.tooltip {
 
 .d3-tip {
     line-height: 1;
-    padding: 12px;
+    text-align: center;
+    position: absolute;
+    padding: 16px;
     background: rgba(43,43,43, 0.8);
     color: #fff;
     border-radius: 2px;
 }
 
+.chart-tip {
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    margin-left: 3em;
+    padding: 14px;
+    background: rgba(43,43,43, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
 
 .legend {
     position:absolute;
-    font-size: 12px;
     font-weight: bold;
     text-anchor: end;
     font: 11px Open Sans;
 
+}
+.axis-label {
+    font-size: 12px;
+}
+
+.no-data{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    fill: rgb(165, 178, 190);
 }

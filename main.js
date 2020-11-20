@@ -10,8 +10,6 @@
 
 /**
  * Takes an iterable of promises as input; returns a single Promise that is array of the inputs
- * @param none
- * @return Promise
  */
 Promise.all([
     d3.json("data/us-states.json"),
@@ -20,9 +18,9 @@ Promise.all([
 ])
     .then(ready);
 
+
 //Global variable for array of selected states
 let selectedStates = [];
-
 
 
 /**
@@ -39,7 +37,7 @@ function ready(data) {
  * Extracts overall number of cases for the requested state
  * @param {array} stats array of data from us-states.json
  * @param {string} stateName name of the state
- * @param {string} rateType Name of rate variable you want to return
+ * @param {string} rateType Name of rate variable to return
  * @return {number} Overall number of cases by state
  */
 function getRate(stats, stateName, rateType) {
@@ -125,12 +123,10 @@ function renderMap(data, svgID, valueRange, rateType) {
         .on("mouseout", toolTip.hide)
 
 
-
-
     /**
      * Pushes selected states to selectedStates array and calls updateGraphs function
      * Removes selected states from selectedStates array and calls updateGraphs function
-     * @param {array} Array of data
+     * @param {array} d Array of data
      * @return (string) rateType Attribute used to render map shading (i.e. Cases per 10M)
      */
     function selected(d) {
@@ -143,7 +139,7 @@ function renderMap(data, svgID, valueRange, rateType) {
         if (!selectedStates.includes(d.properties.name)) {
             d3.select(this).classed("selected", true).raise();
             selectedStates.push(d.properties.name);
-            console.log(selectedStates)
+            //console.log(selectedStates)
             updateGraphs(selectedStates, selectedCategory)
         }
         //Remove state from selectedStates array and call updateGraphs
@@ -154,12 +150,13 @@ function renderMap(data, svgID, valueRange, rateType) {
             d3.selectAll("#" + stateRemoved).remove()
             selectedStates.splice(index, 1);
             updateGraphs(selectedStates, selectedCategory);
-            console.log(selectedStates)
+            //console.log(selectedStates)
         }
     }
 
     // Set color scale
     var color = d3.scaleOrdinal(d3.schemeCategory10);
+
 
     /**
      * Updates line graphs after state selection/removal is made, or a radio button is clicked.
@@ -167,8 +164,8 @@ function renderMap(data, svgID, valueRange, rateType) {
      * @param {string} selectedCategory Name of the category selected from the radio button
      */
     function updateGraphs(selectedStates, selectedCategory) {
-        console.log(selectedStates)
-        console.log(selectedCategory)
+        //(selectedStates)
+        //console.log(selectedCategory)
         //Set current state to the last state listed in the selectedStates array.
         currentState = selectedStates[selectedStates.length - 1];
 
@@ -229,7 +226,7 @@ function renderMap(data, svgID, valueRange, rateType) {
                 .style("text-anchor", "middle")
                 .text(currentState);
 
-            // Add text label "Year" to X-axis
+            // Add text label "Year" just below the middle of the X-axis
             g.append("text")
                 .attr("class", "axis-label")
                 .attr("y", 205)
@@ -237,7 +234,7 @@ function renderMap(data, svgID, valueRange, rateType) {
                 .style("text-anchor", "middle")
                 .text("Year");
 
-            // Add text label "Number of Cases per 10M" to Y-axis
+            // Add text label "Number of Cases per 10M" to Y-axis and transform/rotate it.
             g.append("text")
                 .attr("transform", "rotate(270)")
                 .attr("class", "axis-label")
@@ -336,7 +333,6 @@ function renderMap(data, svgID, valueRange, rateType) {
                             return color(d);
                         })
                 });
-
             });
 
             // Define tool tip table for state line charts
@@ -374,7 +370,9 @@ function renderMap(data, svgID, valueRange, rateType) {
                 .on("mouseover", tooltipChart.show)
                 .on("mouseout", tooltipChart.hide);
 
-        }
+        } // Ends the if statement for selectedStates arrays that are > 0
+
+
             //Exit Selection: Remove svg element of id #state-graphs for each de-selected state.
             d3.select("#state-graphs")
                 .selectAll("svg")
@@ -395,7 +393,6 @@ function renderMap(data, svgID, valueRange, rateType) {
          */
     /* ======================================================================== */
 
-
         /**
          * Updates line graphs after radio button selected.
          * @param {array} selectedStates Array of states selected from the map
@@ -407,7 +404,6 @@ function renderMap(data, svgID, valueRange, rateType) {
             d3.selectAll("#currentDots").remove();
             d3.selectAll("#currentLegend").remove();
             d3.selectAll(".no-data").remove();
-
 
             let j = 0;
             while (j < selectedStates.length) {

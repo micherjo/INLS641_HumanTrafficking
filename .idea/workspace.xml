@@ -8,10 +8,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Created directories, refactored files">
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Renamed as main">
+      <change afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis-updated.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/micherjo/INLS641_HumanTrafficking" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1jKXDvki3tluKxniVJRfa6ApzxW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -112,7 +120,7 @@
       <workItem from="1605761069467" duration="893000" />
       <workItem from="1605815662683" duration="1462000" />
       <workItem from="1605831813238" duration="4372000" />
-      <workItem from="1605836254391" duration="356000" />
+      <workItem from="1605836254391" duration="5485000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -219,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605834411629</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Renamed as main">
+      <created>1605836625518</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1605836625518</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,13 +256,28 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="origin/gh-pages" />
                       </list>
                     </value>
                   </entry>
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/gh-pages" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -275,7 +305,8 @@
     <MESSAGE value="Had to fix the css for new chart tooltip" />
     <MESSAGE value="Added libraries directly into the repo; removed unnecessary files" />
     <MESSAGE value="Created directories, refactored files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created directories, refactored files" />
+    <MESSAGE value="Renamed as main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed as main" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#Plugins" timestamp="1603924890272">
@@ -364,7 +395,7 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2381" y="224" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603978825081" />
-    <state x="350" y="125" key="Vcs.Push.Dialog.v2" timestamp="1605834413072">
+    <state x="350" y="125" key="Vcs.Push.Dialog.v2" timestamp="1605836642805">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808405722" />
@@ -372,10 +403,10 @@
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605637203850" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
     <state x="1571" y="97" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.0.1600.900@1280.0.1600.900" timestamp="1604703707765" />
-    <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605834413072" />
+    <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605836642805" />
     <state x="2270" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1604343490085" />
     <state x="233" y="101" key="Vcs.Push.Dialog.v2/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604541980101" />
-    <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605833671042">
+    <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605836925869">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="-790" y="-692" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603807768053" />
@@ -383,7 +414,7 @@
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1487.-1080.1920.1040@0.0.1280.680" timestamp="1603660552586" />
     <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605815664973" />
     <state x="1853" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800/1280.0.1600.900@1280.0.1600.900" timestamp="1604703697934" />
-    <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605833671042" />
+    <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605836925869" />
     <state x="2607" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1604464974717" />
     <state x="458" y="294" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604673187107" />
     <state x="0" y="0" width="1083" height="632" key="dock-window-1" timestamp="1605625810908">
@@ -397,11 +428,11 @@
     </state>
     <state x="411" y="158" key="run.anything.popup/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605634508213" />
     <state x="616" y="270" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605835646215" />
-    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1605835629433">
+    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1605838536365">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="-854" y="-851" width="672" height="608" key="search.everywhere.popup/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603809247629" />
-    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605835629433" />
+    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605838536365" />
     <state x="415" y="183" width="670" height="425" key="search.everywhere.popup/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604243318725" />
   </component>
 </project>

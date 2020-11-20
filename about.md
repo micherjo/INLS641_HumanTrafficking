@@ -5,7 +5,7 @@
     <title>Human Trafficking in the US</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
-    <script src="vis-updated.js"></script>
+    <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 
 

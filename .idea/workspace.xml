@@ -8,7 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Fixed variables and function naming to camelCase">
+    <list default="true" id="a477830f-4fca-4a61-86e2-b6d7341198a7" name="Default Changelist" comment="Put legend rect on right-side of text to avoid cutting off text.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
@@ -119,7 +119,7 @@
       <workItem from="1605761069467" duration="893000" />
       <workItem from="1605815662683" duration="1462000" />
       <workItem from="1605831813238" duration="4372000" />
-      <workItem from="1605836254391" duration="6063000" />
+      <workItem from="1605836254391" duration="10055000" />
     </task>
     <task id="LOCAL-00001" summary="I added the names into the rectangles and tried to mess around with adding graphs in -Laura">
       <created>1603685730642</created>
@@ -240,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605841879080</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Put legend rect on right-side of text to avoid cutting off text.">
+      <created>1605842439718</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1605842439718</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +325,8 @@
     <MESSAGE value="Created directories, refactored files" />
     <MESSAGE value="Renamed as main" />
     <MESSAGE value="Fixed variables and function naming to camelCase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed variables and function naming to camelCase" />
+    <MESSAGE value="Put legend rect on right-side of text to avoid cutting off text." />
+    <option name="LAST_COMMIT_MESSAGE" value="Put legend rect on right-side of text to avoid cutting off text." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="220" key="#Plugins" timestamp="1603924890272">
@@ -407,7 +415,7 @@
       <screen x="1920" y="0" width="1920" height="1160" />
     </state>
     <state x="2381" y="224" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1603978825081" />
-    <state x="350" y="125" key="Vcs.Push.Dialog.v2" timestamp="1605841885604">
+    <state x="350" y="125" key="Vcs.Push.Dialog.v2" timestamp="1605842443086">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1477.-1080.1920.1040@0.0.1280.680" timestamp="1603808405722" />
@@ -415,7 +423,7 @@
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605637203850" />
     <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1603734010068" />
     <state x="1571" y="97" key="Vcs.Push.Dialog.v2/0.0.1280.800/1280.0.1600.900@1280.0.1600.900" timestamp="1604703707765" />
-    <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605841885604" />
+    <state x="350" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605842443086" />
     <state x="2270" y="125" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.0.1920.1160@1920.0.1920.1160" timestamp="1604343490085" />
     <state x="233" y="101" key="Vcs.Push.Dialog.v2/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604541980101" />
     <state x="687" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605841861619">
@@ -440,11 +448,11 @@
     </state>
     <state x="411" y="158" key="run.anything.popup/0.0.1280.680/-1920.-563.1920.1040@0.0.1280.680" timestamp="1605634508213" />
     <state x="616" y="270" key="run.anything.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605835646215" />
-    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1605838536365">
+    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1605845313369">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="-854" y="-851" width="672" height="608" key="search.everywhere.popup/0.0.1280.680/-1477.-1080.1920.1040@-1477.-1080.1920.1040" timestamp="1603809247629" />
-    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605838536365" />
+    <state x="1055" y="265" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1605845313369" />
     <state x="415" y="183" width="670" height="425" key="search.everywhere.popup/0.23.1280.727/1280.23.1600.877@0.23.1280.727" timestamp="1604243318725" />
   </component>
 </project>

@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<h2>  Too small?  A larger version of this map can be viewed at; https://opal.ils.unc.edu/~micherjo/inls641/Project/INLS641_HumanTrafficking/map.html </h2>
+<h3>  Too small?  A larger version of this map can be viewed at <a href="https://opal.ils.unc.edu/~micherjo/inls641/Project/INLS641_HumanTrafficking/map.html">opal.sils.unc.edu</a></h3>
 </body>
 
 

@@ -89,12 +89,12 @@ function renderMap(data, svgID, valueRange, rateType) {
         .html(function(d) {
             if (getRate(stats, d.properties.name, rateType) === undefined) {
                 let tooltipTable = "<table>" +
-                    "<tr>State Name: </td>" + d.properties.name + "</td></tr>" +
+                    "<tr>State: </td>" + d.properties.name + "</td></tr>" +
                     "<tr><th>Total Offenses: </th><td>" + "No data available" + "</td></tr>"
                 return tooltipTable
             } else {
                 let tooltipTable = "<table>" +
-                    "<tr>State Name: </td>" + d.properties.name + "</td></tr>" +
+                    "<tr>State: </td>" + d.properties.name + "</td></tr>" +
                     "<tr><th>Total Offenses: </th><td>" + getRate(stats, d.properties.name, rateType); + "</td></tr>"
                 return tooltipTable
             }

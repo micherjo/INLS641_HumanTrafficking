@@ -53,3 +53,5 @@
 </div>
 
 </body>
+
+<h3>  Too small?  A larger version of this map can be viewed at; https://opal.ils.unc.edu/~micherjo/inls641/Project/INLS641_HumanTrafficking/map.html </h3>

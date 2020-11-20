@@ -228,7 +228,7 @@ function renderMap(data, svgID, valueRange, rateType) {
         // Add text label for the state name to the top-middle of the SVG
         g.append("text")
             .attr("class", "label")
-            .attr("x", 190)
+            .attr("x", 170)
             .attr("y", -30)
             .style("text-anchor", "middle")
             .text(currentState);

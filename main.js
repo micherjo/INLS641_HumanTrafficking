@@ -90,12 +90,12 @@ function renderMap(data, svg_id, val_range, rate_type) {
             if (getrate(stats, d.properties.name, rate_type) === undefined) {
                 let html = "<table>" +
                     "<tr>State Name: </td>" + d.properties.name + "</td></tr>" +
-                    "<tr><th>Total Offenses:</th><td>" + "No data available" + "</td></tr>"
+                    "<tr><th>Total Offenses: </th><td>" + "No data available" + "</td></tr>"
                 return html
             } else {
                 let html = "<table>" +
                     "<tr>State Name: </td>" + d.properties.name + "</td></tr>" +
-                    "<tr><th>Total Offenses:</th><td>" + getrate(stats, d.properties.name, rate_type); + "</td></tr>"
+                    "<tr><th>Total Offenses: </th><td>" + getrate(stats, d.properties.name, rate_type); + "</td></tr>"
                 return html
             }
         });
@@ -334,7 +334,7 @@ function renderMap(data, svg_id, val_range, rate_type) {
             .html(function(d) {
                 let html = "<table>" +
                     "<tr>Year : </td>" + d.year + "</td></tr>" +
-                    "<tr><th> " + d.category_value + "</th><td>" + ": " + d.avg_data_value + " cases/10 M" + "</td></tr>"
+                    "<tr><th> " + d.category_value + "</th><td>" + ": " + d.avg_data_value + " cases per 10M" + "</td></tr>"
                 return html
             });
         svg.call(tool_tip_chart)
